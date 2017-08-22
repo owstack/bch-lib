@@ -1,0 +1,30 @@
+{
+  "name": "bcccore-lib",
+  "main": "./bcccore.min.js",
+  "version": "0.13.19",
+  "homepage": "http://openwalletstack.com",
+  "authors": [
+    "Open Wallet Stack"
+  ],
+  "description": "A pure, powerful core for your Bitcoin Cash project.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "bitcoin cash",
+    "bcccore",
+    "bcc",
+    "satoshi"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "CONTRIBUTING.md",
+    "gulpfile.js",
+    "lib",
+    "index.js",
+    "karma.conf.js",
+    "npm-shrinkwrap.json",
+    "test"
+  ]
+}
