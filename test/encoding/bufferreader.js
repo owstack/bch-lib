@@ -193,7 +193,7 @@ describe('BufferReader', function() {
     it('should return 10BCC', function() {
       var tenbcc = 10 * 1e8;
       var tenbccBuffer = new Buffer('00ca9a3b00000000', 'hex');
-      var br = new BufferReader(tenbtcBuffer);
+      var br = new BufferReader(tenbccBuffer);
       br.readUInt64LEBN().toNumber().should.equal(tenbcc);
     });
 
