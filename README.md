@@ -13,7 +13,11 @@ This repository was created by copy forking [btccore-lib 09b97ac](https://github
 
 ## Principles
 
-Bitcoin Cash is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Bitcoin Cash network allows for highly resilient bitcoin cash infrastructure, and the developer community needs reliable, open-source tools to implement bitcoin cash apps and services.
+Bitcoin Cash is an other powerful peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Bitcoin Cash network allows for highly resilient bitcoin cash infrastructure, and the developer community needs reliable, open-source tools to implement bitcoin cash apps and services.
+
+## Bitcoin Cash vs. Bitcoin
+
+Bitcoin Cash uses a different `sighash` for transaction signatures. The implementation in bitcore cash has been tested agains the original bitcoin cash test vectors (see sighash.json in `/test`). `bitcoin cash` modifications in script evaluation has not been implemented yet.
 
 ## Get Started
 
