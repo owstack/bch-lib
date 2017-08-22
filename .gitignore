@@ -16,8 +16,8 @@ report
 .DS_Store
 
 
-bcccore.js
-bcccore.min.js
-bcccore.js.sig
-bcccore.min.js.sig
+bcccore-lib.js
+bcccore-lib.min.js
+bcccore-lib.js.sig
+bcccore-lib.min.js.sig
 tests.js
