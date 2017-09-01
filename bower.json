@@ -1,7 +1,7 @@
 {
   "name": "bcccore-lib",
   "main": "./bcccore.min.js",
-  "version": "0.13.19",
+  "version": "0.0.1",
   "homepage": "http://openwalletstack.com",
   "authors": [
     "Open Wallet Stack"
