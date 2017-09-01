@@ -163,7 +163,7 @@ describe('PrivateKey', function() {
     it('should not be able to instantiate with unknown network', function() {
       expect(function() {
         return new PrivateKey(new BN(2), 'unknown');
-      }).to.throw('Must specify the network ("livenet/bcc" or "testnet/bcc")');
+      }).to.throw('Must specify the network ("livenet/bcc" or "testnet")');
     });
 
     it('should not create a zero private key', function() {
@@ -212,7 +212,7 @@ describe('PrivateKey', function() {
     });
 
     it('input json should correctly initialize network field', function() {
-      [Constants.LIVENET, Constants.TESTNET, 'mainnet/bcc'].forEach(function (net) {
+      [Constants.LIVENET, Constants.TESTNET, 'mainnet'].forEach(function (net) {
         var pk = PrivateKey.fromObject({
           bn: '96c132224121b509b7d0a16245e957d9192609c5637c6228311287b1be21627a',
           compressed: false,
@@ -278,20 +278,20 @@ describe('PrivateKey', function() {
     it('should output known livenet address for console', function() {
       var privkey = PrivateKey.fromWIF('L3T1s1TYP9oyhHpXgkyLoJFGniEgkv2Jhi138d7R2yJ9F4QdDU2m');
       privkey.inspect().should.equal(
-        '<PrivateKey: b9de6e778fe92aa7edb69395556f843f1dce0448350112e14906efc2a80fa61a, network: livenet/bcc>'
+        '<PrivateKey: b9de6e778fe92aa7edb69395556f843f1dce0448350112e14906efc2a80fa61a, network: livenet>'
       );
     });
 
     it('should output known testnet address for console', function() {
       var privkey = PrivateKey.fromWIF('cR4qogdN9UxLZJXCNFNwDRRZNeLRWuds9TTSuLNweFVjiaE4gPaq');
       privkey.inspect().should.equal(
-        '<PrivateKey: 67fd2209ce4a95f6f1d421ab3fbea47ada13df11b73b30c4d9a9f78cc80651ac, network: testnet/bcc>'
+        '<PrivateKey: 67fd2209ce4a95f6f1d421ab3fbea47ada13df11b73b30c4d9a9f78cc80651ac, network: testnet>'
       );
     });
 
     it('outputs "uncompressed" for uncompressed imported WIFs', function() {
       var privkey = PrivateKey.fromWIF(wifLivenetUncompressed);
-      privkey.inspect().should.equal('<PrivateKey: 96c132224121b509b7d0a16245e957d9192609c5637c6228311287b1be21627a, network: livenet/bcc, uncompressed>');
+      privkey.inspect().should.equal('<PrivateKey: 96c132224121b509b7d0a16245e957d9192609c5637c6228311287b1be21627a, network: livenet, uncompressed>');
     });
   });
 
@@ -445,12 +445,12 @@ describe('PrivateKey', function() {
 
   });
 
-  it('creates an address as expected from WIF, livenet/bcc', function() {
+  it('creates an address as expected from WIF, livenet', function() {
     var privkey = new PrivateKey('5J2NYGstJg7aJQEqNwYp4enG5BSfFdKXVTtBLvHicnRGD5kjxi6');
     privkey.publicKey.toAddress().toString().should.equal('135bwugFCmhmNU3SeCsJeTqvo5ViymgwZ9');
   });
 
-  it('creates an address as expected from WIF, testnet/bcc', function() {
+  it('creates an address as expected from WIF, testnet', function() {
     var privkey = new PrivateKey('92VYMmwFLXRwXn5688edGxYYgMFsc3fUXYhGp17WocQhU6zG1kd');
     privkey.publicKey.toAddress().toString().should.equal('moiAvLUw16qgrwhFGo1eDnXHC2wPMYiv7Y');
   });

@@ -31,8 +31,8 @@ Take a look at this modified snippet from [networks.js](https://github.com/owsta
 ```javascript
 var livenet = new Network();
 _.extend(livenet, {
-  name: 'livenet/bcc',
-  alias: 'mainnet/bcc',
+  name: 'livenet',
+  alias: 'mainnet',
   pubkeyhash: 0x00,
   privatekey: 0x80,
   scripthash: 0x05,
@@ -43,8 +43,8 @@ _.extend(livenet, {
 
 var testnet = new Network();
 _.extend(testnet, {
-  name: 'testnet/bcc',
-  alias: 'testnet/bcc',
+  name: 'testnet',
+  alias: 'testnet',
   pubkeyhash: 0x6f,
   privatekey: 0xef,
   scripthash: 0xc4,
