@@ -34,7 +34,7 @@ describe('Networks', function() {
     ]);
   });
 
-  it('will get network based on string "regtest/bcc" value', function() {
+  it('will get network based on string "regtest" value', function() {
     var network = networks.get(Constants.TESTNET_ALIAS);
     network.should.equal(networks.testnet);
   });

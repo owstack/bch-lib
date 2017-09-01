@@ -31,7 +31,7 @@ describe('Address', function() {
   it('should throw an error because of bad network param', function() {
     (function() {
       return new Address(PKHLivenet[0], 'main', 'pubkeyhash');
-    }).should.throw('Second argument must be "livenet/bcc" or "testnet/bcc".');
+    }).should.throw('Second argument must be "livenet" or "testnet".');
   });
 
   it('should throw an error because of bad type param', function() {
@@ -155,14 +155,14 @@ describe('Address', function() {
       }
     });
 
-    it('rejects correctly the P2PKH livenet test vector with "testnet/bcc" parameter', function() {
+    it('rejects correctly the P2PKH livenet test vector with "testnet" parameter', function() {
       for (var i = 0; i < PKHLivenet.length; i++) {
         var error = Address.getValidationError(PKHLivenet[i], Constants.TESTNET);
         should.exist(error);
       }
     });
 
-    it('validates correctly the P2PKH livenet test vector with "livenet/bcc" parameter', function() {
+    it('validates correctly the P2PKH livenet test vector with "livenet" parameter', function() {
       for (var i = 0; i < PKHLivenet.length; i++) {
         var error = Address.getValidationError(PKHLivenet[i], Constants.LIVENET);
         should.not.exist(error);
@@ -488,7 +488,7 @@ describe('Address', function() {
   describe('#inspect', function() {
     it('should output formatted output correctly', function() {
       var address = new Address(str);
-      var output = '<Address: 16VZnHwRhwrExfeHFHGjwrgEMq8VcYPs9r, type: pubkeyhash, network: livenet/bcc>';
+      var output = '<Address: 16VZnHwRhwrExfeHFHGjwrgEMq8VcYPs9r, type: pubkeyhash, network: livenet>';
       address.inspect().should.equal(output);
     });
   });
