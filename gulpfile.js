@@ -1,5 +1,2 @@
-
-
-var bcccoreTasks = require('bcccore-build');
-
-bcccoreTasks('lib');
+var owsTasks = require('ows-build');
+owsTasks('bcccore', 'lib');
