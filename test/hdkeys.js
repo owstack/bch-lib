@@ -10,15 +10,16 @@
 /* jshint maxstatements: 100 */
 /* jshint unused: false */
 
-var _ = require('lodash');
-var should = require('chai').should();
 var expect = require('chai').expect;
+var should = require('chai').should();
 var sinon = require('sinon');
+
 var bcccore = require('..');
-var Networks = bcccore.Networks;
+var Constants = require('../lib/common/constants');
 var HDPrivateKey = bcccore.HDPrivateKey;
 var HDPublicKey = bcccore.HDPublicKey;
-var Constants = require('../lib/common/constants');
+var Networks = bcccore.Networks;
+var _ = require('lodash');
 
 describe('HDKeys building with static methods', function() {
   var classes = [HDPublicKey, HDPrivateKey];

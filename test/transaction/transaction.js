@@ -2,25 +2,25 @@
 
 /* jshint unused: false */
 /* jshint latedef: false */
-var should = require('chai').should();
 var expect = require('chai').expect;
-var _ = require('lodash');
+var should = require('chai').should();
 var sinon = require('sinon');
 
 var bcccore = require('../..');
+var owsCommon = require('ows-common');
+var Address = bcccore.Address;
 var BN = bcccore.crypto.BN;
-var Transaction = bcccore.Transaction;
+var Constants = require('../../lib/common/constants');
+var errors = owsCommon.errors;
 var Input = bcccore.Transaction.Input;
+var Networks = bcccore.Networks;
+var Opcode = bcccore.Opcode;
 var Output = bcccore.Transaction.Output;
 var PrivateKey = bcccore.PrivateKey;
 var Script = bcccore.Script;
-var Address = bcccore.Address;
-var Networks = bcccore.Networks;
-var Opcode = bcccore.Opcode;
-var errors = bcccore.errors;
-var Constants = require('../../lib/common/constants');
-
+var Transaction = bcccore.Transaction;
 var transactionVector = require('../data/tx_creation');
+var _ = require('lodash');
 
 describe('Transaction', function() {
 

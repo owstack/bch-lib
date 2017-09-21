@@ -1,16 +1,15 @@
 'use strict';
 
-var should = require('chai').should();
 var expect = require('chai').expect;
-var _ = require('lodash');
 
 var bcccore = require('../../..');
-var errors = bcccore.errors;
-var PrivateKey = bcccore.PrivateKey;
 var Address = bcccore.Address;
-var Script = bcccore.Script;
-var Networks = bcccore.Networks;
+var errors = bcccore.errors;
 var Input = bcccore.Transaction.Input;
+var Networks = bcccore.Networks;
+var PrivateKey = bcccore.PrivateKey;
+var Script = bcccore.Script;
+var _ = require('lodash');
 
 describe('Transaction.Input', function() {
 

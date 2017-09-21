@@ -1,10 +1,11 @@
 'use strict';
 
 var chai = chai || require('chai');
-var bcccore = require('..');
 var expect = chai.expect;
-var Networks = bcccore.Networks;
 var should = chai.should();
+
+var bcccore = require('..');
+var Networks = bcccore.Networks;
 var URI = bcccore.URI;
 
 describe('URI', function() {

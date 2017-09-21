@@ -38,7 +38,8 @@
     "buffer-compare": "=1.0.0",
     "elliptic": "=3.0.3",
     "inherits": "=2.0.1",
-    "lodash": "=3.10.1"
+    "lodash": "=3.10.1",
+    "ows-common": "https://github.com/owstack/ows-common"
   },
   "devDependencies": {
     "brfs": "^1.2.0",

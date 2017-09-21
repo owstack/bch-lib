@@ -1,10 +1,11 @@
 'use strict';
 
-var should = require('chai').should();
 var expect = require('chai').expect;
+var should = require('chai').should();
 
 var bcccore = require('..');
-var errors = bcccore.errors;
+var owsCommon = require('ows-common');
+var errors = owsCommon.errors;
 var Unit = bcccore.Unit;
 
 describe('Unit', function() {

@@ -5,15 +5,14 @@ var should = chai.should();
 var expect = chai.expect;
 
 var bcccore = require('..');
+var Base58Check = bcccore.encoding.Base58Check;
 var BN = bcccore.crypto.BN;
+var invalidbase58 = require('./data/bitcoind/base58_keys_invalid.json');
+var Networks = bcccore.Networks;
 var Point = bcccore.crypto.Point;
 var PrivateKey = bcccore.PrivateKey;
-var Networks = bcccore.Networks;
-var Base58Check = bcccore.encoding.Base58Check;
 var Constants = require('../lib/common/constants');
-
 var validbase58 = require('./data/bitcoind/base58_keys_valid.json');
-var invalidbase58 = require('./data/bitcoind/base58_keys_invalid.json');
 
 describe('PrivateKey', function() {
   var hex = '96c132224121b509b7d0a16245e957d9192609c5637c6228311287b1be21627a';
@@ -163,7 +162,7 @@ describe('PrivateKey', function() {
     it('should not be able to instantiate with unknown network', function() {
       expect(function() {
         return new PrivateKey(new BN(2), 'unknown');
-      }).to.throw('Must specify the network ("livenet/bcc" or "testnet")');
+      }).to.throw('Must specify the network ("livenet" or "testnet")');
     });
 
     it('should not create a zero private key', function() {

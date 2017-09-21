@@ -1,20 +1,23 @@
 'use strict';
 
 /* jshint unused: false */
-var _ = require('lodash');
+
 var assert = require('assert');
-var should = require('chai').should();
 var expect = require('chai').expect;
+var should = require('chai').should();
+
 var bcccore = require('..');
+var owsCommon = require('ows-common');
+var Base58Check = bcccore.encoding.Base58Check;
 var buffer = require('buffer');
-var errors = bcccore.errors;
-var hdErrors = bcccore.errors.HDPublicKey;
 var BufferUtil = bcccore.util.buffer;
+var Constants = require('../lib/common/constants');
+var errors = owsCommon.errors;
+var hdErrors = bcccore.errors.HDPublicKey;
 var HDPrivateKey = bcccore.HDPrivateKey;
 var HDPublicKey = bcccore.HDPublicKey;
-var Base58Check = bcccore.encoding.Base58Check;
 var Networks = bcccore.Networks;
-var Constants = require('../lib/common/constants');
+var _ = require('lodash');
 
 var xprivkey = 'xprv9s21ZrQH143K3QTDL4LXw2F7HEK3wJUD2nW2nRk4stbPy6cq3jPPqjiChkVvvNKmPGJxWUtg6LnF5kejMRNNU3TGtRBeJgk33yuGBxrMPHi';
 var xpubkey = 'xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8';

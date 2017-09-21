@@ -1,11 +1,12 @@
 'use strict';
 
-var _ = require('lodash');
 var chai = require('chai');
-var should = chai.should();
 var expect = chai.expect;
+var should = chai.should();
+
 var bcccore = require('..');
 var Opcode = bcccore.Opcode;
+var _ = require('lodash');
 
 describe('Opcode', function() {
 
