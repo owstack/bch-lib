@@ -2,18 +2,18 @@
 
 /* jshint unused: false */
 /* jshint latedef: false */
-var should = require('chai').should();
 var expect = require('chai').expect;
-var _ = require('lodash');
+var should = require('chai').should();
 
 var bcccore = require('../..');
+var owsCommon = require('ows-common');
 var BN = bcccore.crypto.BN;
 var BufferWriter = bcccore.encoding.BufferWriter;
 var BufferReader = bcccore.encoding.BufferReader;
+var errors = owsCommon.errors;
 var Output = bcccore.Transaction.Output;
 var Script = bcccore.Script;
-
-var errors = bcccore.errors;
+var _ = require('lodash');
 
 describe('Output', function() {
 
@@ -178,15 +178,4 @@ describe('Output', function() {
     });
     should.equal(output.script, null);
   });
-
-  it('should throw an error if Script throws an error that is not InvalidBuffer', function() {
-    var output = Output({
-      satoshis: 1000,
-      script: new Script()
-    });
-    (function() {
-      output.setScriptFromBuffer('bad');
-    }).should.throw('Invalid hex string');
-  });
-
 });

@@ -10,8 +10,8 @@ var address = privateKey.toAddress();
 ## Generate a address from a SHA256 hash
 ```javascript
 var value = new Buffer('correct horse battery staple');
-var hash = bcccore.crypto.Hash.sha256(value);
-var bn = bcccore.crypto.BN.fromBuffer(hash);
+var hash = owsCommon.crypto.Hash.sha256(value);
+var bn = owsCommon.crypto.BN.fromBuffer(hash);
 
 var address = new bcccore.PrivateKey(bn).toAddress();
 ```

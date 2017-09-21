@@ -2,14 +2,14 @@
 
 var should = require('chai').should();
 var expect = require('chai').expect;
-var bcccore = require('../..');
 
+var bcccore = require('../..');
+var Address = bcccore.Address;
 var BufferUtil = bcccore.util.buffer;
-var Script = bcccore.Script;
 var Networks = bcccore.Networks;
 var Opcode = bcccore.Opcode;
 var PublicKey = bcccore.PublicKey;
-var Address = bcccore.Address;
+var Script = bcccore.Script;
 
 describe('Script', function() {
 

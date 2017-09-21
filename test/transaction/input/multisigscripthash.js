@@ -1,17 +1,17 @@
 'use strict';
 /* jshint unused: false */
 
-var should = require('chai').should();
 var expect = require('chai').expect;
-var _ = require('lodash');
+var should = require('chai').should();
 
 var bcccore = require('../../..');
-var Transaction = bcccore.Transaction;
-var PrivateKey = bcccore.PrivateKey;
 var Address = bcccore.Address;
+var PrivateKey = bcccore.PrivateKey;
+var MultiSigScriptHashInput = bcccore.Transaction.Input.MultiSigScriptHash;
 var Script = bcccore.Script;
 var Signature = bcccore.crypto.Signature;
-var MultiSigScriptHashInput = bcccore.Transaction.Input.MultiSigScriptHash;
+var Transaction = bcccore.Transaction;
+var _ = require('lodash');
 
 describe('MultiSigScriptHashInput', function() {
 

@@ -1,14 +1,15 @@
 'use strict';
 
-var buffer = require('buffer');
-
 var chai = require('chai');
 var should = chai.should();
+
 var bcccore = require('../../');
-var Script = bcccore.Script;
 var BN = bcccore.crypto.BN;
+var buffer = require('buffer');
+var Script = bcccore.Script;
 var Transaction = bcccore.Transaction;
 var sighash = Transaction.sighash;
+var vectors_sighash = require('../data/sighash.json');
 
 var vectors_sighash = require('../data/sighash.json');
 

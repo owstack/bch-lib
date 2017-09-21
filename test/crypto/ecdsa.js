@@ -1,15 +1,17 @@
 'use strict';
 
+var should = require('chai').should();
+
+var bcccore = require('../..');
+var BN = bcccore.crypto.BN;
+var Constants = require('../../lib/common/constants');
 var ECDSA = require('../../lib/crypto/ecdsa');
-var Hash = require('../../lib/crypto/hash');
+var Hash = bcccore.crypto.Hash;
+var point = require('../../lib/crypto/point');
 var Privkey = require('../../lib/privatekey');
 var Pubkey = require('../../lib/publickey');
 var Signature = require('../../lib/crypto/signature');
-var BN = require('../../lib/crypto/bn');
-var point = require('../../lib/crypto/point');
-var should = require('chai').should();
 var vectors = require('../data/ecdsa');
-var Constants = require('../../lib/common/constants');
 
 describe('ECDSA', function() {
 

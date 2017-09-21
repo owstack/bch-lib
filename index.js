@@ -1,47 +1,38 @@
 'use strict';
 
-var bcccore = module.exports;
+var bcccore = {};
+var owsCommon = require('ows-common');
 
 // module information
 bcccore.version = 'v' + require('./package.json').version;
-bcccore.versionGuard = function(version) {
-  if (version !== undefined && version != global._bcccore) {
-    var message = 'More than one instance of bcccore-lib found. ' +
-      'Please make sure to require bcccore-lib and check that submodules do' +
-      ' not also include their own different version of bcccore-lib dependency.';
-    throw new Error(message);
-  }
-};
-bcccore.versionGuard(global._bcccore);
-global._bcccore = bcccore.version;
 
 // crypto
 bcccore.crypto = {};
-bcccore.crypto.BN = require('./lib/crypto/bn');
+bcccore.crypto.BN = owsCommon.crypto.BN;
 bcccore.crypto.ECDSA = require('./lib/crypto/ecdsa');
-bcccore.crypto.Hash = require('./lib/crypto/hash');
-bcccore.crypto.Random = require('./lib/crypto/random');
+bcccore.crypto.Hash = owsCommon.crypto.Hash;
+bcccore.crypto.Random = owsCommon.crypto.Random;
 bcccore.crypto.Point = require('./lib/crypto/point');
 bcccore.crypto.Signature = require('./lib/crypto/signature');
 
 // encoding
 bcccore.encoding = {};
-bcccore.encoding.Base58 = require('./lib/encoding/base58');
-bcccore.encoding.Base58Check = require('./lib/encoding/base58check');
-bcccore.encoding.BufferReader = require('./lib/encoding/bufferreader');
-bcccore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
-bcccore.encoding.Varint = require('./lib/encoding/varint');
+bcccore.encoding.Base58 = owsCommon.encoding.Base58;
+bcccore.encoding.Base58Check = owsCommon.encoding.Base58Check;
+bcccore.encoding.BufferReader = owsCommon.encoding.BufferReader;
+bcccore.encoding.BufferWriter = owsCommon.encoding.BufferWriter;
+bcccore.encoding.Varint = owsCommon.encoding.Varint;
 
 // utilities
 bcccore.util = {};
-bcccore.util.buffer = require('./lib/util/buffer');
-bcccore.util.js = require('./lib/util/js');
-bcccore.util.preconditions = require('./lib/util/preconditions');
+bcccore.util.buffer = owsCommon.util.buffer;
+bcccore.util.js = owsCommon.util.js;
+bcccore.util.preconditions = owsCommon.util.preconditions;
 
 // errors thrown by the library
-bcccore.errors = require('./lib/errors');
+bcccore.errors = owsCommon.errors;
 
-// main bitcoin cash library
+// main bitcoin library
 bcccore.Address = require('./lib/address');
 bcccore.Block = require('./lib/block');
 bcccore.MerkleBlock = require('./lib/block/merkleblock');
@@ -67,3 +58,5 @@ bcccore.deps._ = require('lodash');
 
 // Internal usage, exposed for testing/advanced tweaking
 bcccore.Transaction.sighash = require('./lib/transaction/sighash');
+
+module.exports = bcccore;

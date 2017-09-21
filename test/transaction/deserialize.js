@@ -1,7 +1,6 @@
 'use strict';
 
 var Transaction = require('../../lib/transaction');
-
 var vectors_valid = require('../data/bitcoind/tx_valid.json');
 var vectors_invalid = require('../data/bitcoind/tx_invalid.json');
 

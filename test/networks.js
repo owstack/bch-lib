@@ -2,9 +2,10 @@
 
 var expect = require('chai').expect;
 var should = require('chai').should();
+
 var bcccore = require('..');
-var networks = bcccore.Networks;
 var Constants = require('../lib/common/constants');
+var networks = bcccore.Networks;
 
 describe('Networks', function() {
 
