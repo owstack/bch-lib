@@ -35,7 +35,7 @@ bcccore.errors = owsCommon.errors;
 // main bitcoin library
 bcccore.Address = require('./lib/address');
 bcccore.Block = require('./lib/block');
-bcccore.Constants = require('./lib/common/Constants');
+bcccore.Constants = require('./lib/common/constants');
 bcccore.MerkleBlock = require('./lib/block/merkleblock');
 bcccore.BlockHeader = require('./lib/block/blockheader');
 bcccore.HDPrivateKey = require('./lib/hdprivatekey.js');
