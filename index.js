@@ -35,6 +35,7 @@ bcccore.errors = owsCommon.errors;
 // main bitcoin library
 bcccore.Address = require('./lib/address');
 bcccore.Block = require('./lib/block');
+bcccore.Constants = require('./lib/common/Constants');
 bcccore.MerkleBlock = require('./lib/block/merkleblock');
 bcccore.BlockHeader = require('./lib/block/blockheader');
 bcccore.HDPrivateKey = require('./lib/hdprivatekey.js');
@@ -50,11 +51,11 @@ bcccore.Unit = require('./lib/unit');
 
 // dependencies, subject to change
 bcccore.deps = {};
-bcccore.deps.bnjs = require('bn.js');
-bcccore.deps.bs58 = require('bs58');
-bcccore.deps.Buffer = Buffer;
+bcccore.deps.bnjs = owsCommon.deps.bnjs;
+bcccore.deps.bs58 = owsCommon.deps.bs58;
+bcccore.deps.Buffer = owsCommon.deps.Buffer;
 bcccore.deps.elliptic = require('elliptic');
-bcccore.deps._ = require('lodash');
+bcccore.deps._ = owsCommon.deps._;
 
 // Internal usage, exposed for testing/advanced tweaking
 bcccore.Transaction.sighash = require('./lib/transaction/sighash');

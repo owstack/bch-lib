@@ -4,8 +4,7 @@ var expect = require('chai').expect;
 var should = require('chai').should();
 
 var bcccore = require('..');
-var owsCommon = require('ows-common');
-var errors = owsCommon.errors;
+var errors = bcccore.errors;
 var Unit = bcccore.Unit;
 
 describe('Unit', function() {

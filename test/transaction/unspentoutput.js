@@ -6,7 +6,7 @@ var should = chai.should();
 
 var bcccore = require('../..');
 var UnspentOutput = bcccore.Transaction.UnspentOutput;
-var _ = require('lodash');
+var _ = bcccore.deps._;
 
 describe('UnspentOutput', function() {
 

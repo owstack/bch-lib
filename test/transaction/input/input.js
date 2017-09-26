@@ -9,7 +9,7 @@ var Input = bcccore.Transaction.Input;
 var Networks = bcccore.Networks;
 var PrivateKey = bcccore.PrivateKey;
 var Script = bcccore.Script;
-var _ = require('lodash');
+var _ = bcccore.deps._;
 
 describe('Transaction.Input', function() {
 

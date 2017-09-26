@@ -7,11 +7,10 @@ var should = require('chai').should();
 var sinon = require('sinon');
 
 var bcccore = require('../..');
-var owsCommon = require('ows-common');
 var Address = bcccore.Address;
 var BN = bcccore.crypto.BN;
-var Constants = require('../../lib/common/constants');
-var errors = owsCommon.errors;
+var Constants = bcccore.Constants;
+var errors = bcccore.errors;
 var Input = bcccore.Transaction.Input;
 var Networks = bcccore.Networks;
 var Opcode = bcccore.Opcode;
@@ -20,7 +19,7 @@ var PrivateKey = bcccore.PrivateKey;
 var Script = bcccore.Script;
 var Transaction = bcccore.Transaction;
 var transactionVector = require('../data/tx_creation');
-var _ = require('lodash');
+var _ = bcccore.deps._;
 
 describe('Transaction', function() {
 

@@ -11,7 +11,7 @@ var invalidbase58 = require('./data/bitcoind/base58_keys_invalid.json');
 var Networks = bcccore.Networks;
 var Point = bcccore.crypto.Point;
 var PrivateKey = bcccore.PrivateKey;
-var Constants = require('../lib/common/constants');
+var Constants = bcccore.Constants;
 var validbase58 = require('./data/bitcoind/base58_keys_valid.json');
 
 describe('PrivateKey', function() {

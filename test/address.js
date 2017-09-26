@@ -8,7 +8,7 @@ var should = chai.should();
 
 var bcccore = require('..');
 var Address = bcccore.Address;
-var Constants = require('../lib/common/constants');
+var Constants = bcccore.Constants;
 var invalidbase58 = require('./data/bitcoind/base58_keys_invalid.json');
 var Networks = bcccore.Networks;
 var PublicKey = bcccore.PublicKey;

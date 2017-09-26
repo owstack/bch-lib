@@ -6,7 +6,7 @@ var should = chai.should();
 
 var bcccore = require('..');
 var Opcode = bcccore.Opcode;
-var _ = require('lodash');
+var _ = bcccore.deps._;
 
 describe('Opcode', function() {
 
