@@ -5,14 +5,13 @@
 var expect = require('chai').expect;
 var should = require('chai').should();
 
-var owsCommon = require('ows-common');
 var bcccore = require('../..');
-var errors = owsCommon.errors;
+var errors = bcccore.errors;
 var Script = bcccore.Script;
 var PrivateKey = bcccore.PrivateKey;
 var Transaction = bcccore.Transaction;
 var TransactionSignature = bcccore.Transaction.Signature;
-var _ = require('lodash');
+var _ = bcccore.deps._;
 
 describe('TransactionSignature', function() {
 

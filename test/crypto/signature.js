@@ -9,7 +9,7 @@ var Interpreter = bcccore.Script.Interpreter;
 var sig_canonical = require('../data/bitcoind/sig_canonical');
 var sig_noncanonical = require('../data/bitcoind/sig_noncanonical');
 var Signature = bcccore.crypto.Signature;
-var _ = require('lodash');
+var _ = bcccore.deps._;
 
 describe('Signature', function() {
 

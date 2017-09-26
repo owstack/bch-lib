@@ -6,16 +6,15 @@ var expect = require('chai').expect;
 var should = require('chai').should();
 
 var bcccore = require('..');
-var owsCommon = require('ows-common');
 var Base58Check = bcccore.encoding.Base58Check;
-var buffer = require('buffer');
+var Buffer = bcccore.deps.Buffer;
 var BufferUtil = bcccore.util.buffer;
-var Constants = require('../lib/common/constants');
-var errors = owsCommon.errors;
+var Constants = bcccore.Constants;
+var errors = bcccore.errors;
 var hdErrors = errors.HDPrivateKey;
 var HDPrivateKey = bcccore.HDPrivateKey;
 var Networks = bcccore.Networks;
-var _ = require('lodash');
+var _ = bcccore.deps._;
 
 var xprivkey = 'xprv9s21ZrQH143K3QTDL4LXw2F7HEK3wJUD2nW2nRk4stbPy6cq3jPPqjiChkVvvNKmPGJxWUtg6LnF5kejMRNNU3TGtRBeJgk33yuGBxrMPHi';
 var json = '{"network":"livenet","depth":0,"fingerPrint":876747070,"parentFingerPrint":0,"childIndex":0,"chainCode":"873dff81c02f525623fd1fe5167eac3a55a049de3d314bb42ee227ffed37d508","privateKey":"e8f32e723decf4051aefac8e2c93c9c5b214313817cdb01a1494b917c8436b35","checksum":-411132559,"xprivkey":"xprv9s21ZrQH143K3QTDL4LXw2F7HEK3wJUD2nW2nRk4stbPy6cq3jPPqjiChkVvvNKmPGJxWUtg6LnF5kejMRNNU3TGtRBeJgk33yuGBxrMPHi"}';
@@ -144,7 +143,7 @@ describe('HDPrivate key interface', function() {
   });
 
   it('returns InvalidLength if data of invalid length is given to getSerializedError', function() {
-    var b58s = Base58Check.encode(new buffer.Buffer('onestring'));
+    var b58s = Base58Check.encode(new Buffer('onestring'));
     expect(
       HDPrivateKey.getSerializedError(b58s) instanceof hdErrors.InvalidLength
     ).to.equal(true);

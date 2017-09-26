@@ -15,11 +15,11 @@ var should = require('chai').should();
 var sinon = require('sinon');
 
 var bcccore = require('..');
-var Constants = require('../lib/common/constants');
+var Constants = bcccore.Constants;
 var HDPrivateKey = bcccore.HDPrivateKey;
 var HDPublicKey = bcccore.HDPublicKey;
 var Networks = bcccore.Networks;
-var _ = require('lodash');
+var _ = bcccore.deps._;
 
 describe('HDKeys building with static methods', function() {
   var classes = [HDPublicKey, HDPrivateKey];

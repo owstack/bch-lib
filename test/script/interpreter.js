@@ -14,7 +14,7 @@ var script_invalid = require('../data/bitcoind/script_invalid');
 var Transaction = bcccore.Transaction;
 var tx_valid = require('../data/bitcoind/tx_valid');
 var tx_invalid = require('../data/bitcoind/tx_invalid');
-var _ = require('lodash');
+var _ = bcccore.deps._;
 
 //the script string format used in bitcoind data tests
 Script.fromBitcoindString = function(str) {

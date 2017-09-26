@@ -6,14 +6,13 @@ var expect = require('chai').expect;
 var should = require('chai').should();
 
 var bcccore = require('../..');
-var owsCommon = require('ows-common');
 var BN = bcccore.crypto.BN;
 var BufferWriter = bcccore.encoding.BufferWriter;
 var BufferReader = bcccore.encoding.BufferReader;
-var errors = owsCommon.errors;
+var errors = bcccore.errors;
 var Output = bcccore.Transaction.Output;
 var Script = bcccore.Script;
-var _ = require('lodash');
+var _ = bcccore.deps._;
 
 describe('Output', function() {
 

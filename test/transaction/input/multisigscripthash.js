@@ -11,7 +11,7 @@ var MultiSigScriptHashInput = bcccore.Transaction.Input.MultiSigScriptHash;
 var Script = bcccore.Script;
 var Signature = bcccore.crypto.Signature;
 var Transaction = bcccore.Transaction;
-var _ = require('lodash');
+var _ = bcccore.deps._;
 
 describe('MultiSigScriptHashInput', function() {
 
