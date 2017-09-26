@@ -34,10 +34,11 @@
   },
   "dependencies": {
     "bn.js": "=2.0.4",
+    "bs58": "=2.0.0",
     "buffer-compare": "=1.0.0",
     "elliptic": "=3.0.3",
     "inherits": "=2.0.1",
-    "ows-common": "https://github.com/owstack/ows-common"
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "brfs": "^1.2.0",
