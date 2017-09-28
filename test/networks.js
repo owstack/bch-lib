@@ -19,7 +19,7 @@ describe('Networks', function() {
 
   it('will enable/disable regtest Network', function() {
     networks.enableRegtest();
-    networks.testnet.networkMagic.should.deep.equal(new Buffer('fabfb5da', 'hex'));
+    networks.testnet.networkMagic.should.deep.equal(new Buffer('dab5bffa', 'hex'));
     networks.testnet.port.should.equal(18444);
     networks.testnet.dnsSeeds.should.deep.equal([]);
     networks.testnet.regtestEnabled.should.equal(true);
