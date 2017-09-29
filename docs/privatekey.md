@@ -1,5 +1,5 @@
 # Private Key
-Represents a bitcoin cash private key and is needed to be able to spend bitcoin cash and sign transactions. See the official [Bitcoin Wiki](https://en.bitcoin.it/wiki/Private_key) for more information about private keys. A PrivateKey in Bcccore is an immutable object that has methods to import and export into a variety of formats including [Wallet Import Format](https://en.bitcoin.it/wiki/Wallet_import_format).
+Represents a bitcoin cash private key and is needed to be able to spend bitcoin cash and sign transactions. See the official [Bitcoin Wiki](https://en.bitcoin.it/wiki/Private_key) for more information about private keys. A PrivateKey in Bch Lib is an immutable object that has methods to import and export into a variety of formats including [Wallet Import Format](https://en.bitcoin.it/wiki/Wallet_import_format).
 
 ## Instantiate a Private Key
 Here is how to create a new private key. It will generate a new random number using `window.crypto` or the Node.js `crypto` library.

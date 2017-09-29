@@ -3,9 +3,9 @@
 var expect = require('chai').expect;
 var should = require('chai').should();
 
-var bcccore = require('..');
-var Constants = bcccore.Constants;
-var networks = bcccore.Networks;
+var bchLib = require('..');
+var Constants = bchLib.Constants;
+var networks = bchLib.Networks;
 
 describe('Networks', function() {
 

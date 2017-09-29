@@ -3,11 +3,11 @@
 var should = require('chai').should();
 
 var fs = require('fs');
-var bcccore = require('../..');
-var BlockHeader = bcccore.BlockHeader;
-var BN = bcccore.crypto.BN;
-var BufferReader = bcccore.encoding.BufferReader;
-var BufferWriter = bcccore.encoding.BufferWriter;
+var bchLib = require('../..');
+var BlockHeader = bchLib.BlockHeader;
+var BN = bchLib.crypto.BN;
+var BufferReader = bchLib.encoding.BufferReader;
+var BufferWriter = bchLib.encoding.BufferWriter;
 
 // https://test-bex.openwalletstack.com/block/000000000b99b16390660d79fcc138d2ad0c89a0d044c4201a02bdf1f61ffa11
 var dataRawBlockBuffer = fs.readFileSync('test/data/blk86756-testnet.dat');

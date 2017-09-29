@@ -2,14 +2,14 @@
 
 var expect = require('chai').expect;
 
-var bcccore = require('../../..');
-var Address = bcccore.Address;
-var errors = bcccore.errors;
-var Input = bcccore.Transaction.Input;
-var Networks = bcccore.Networks;
-var PrivateKey = bcccore.PrivateKey;
-var Script = bcccore.Script;
-var _ = bcccore.deps._;
+var bchLib = require('../../..');
+var Address = bchLib.Address;
+var errors = bchLib.errors;
+var Input = bchLib.Transaction.Input;
+var Networks = bchLib.Networks;
+var PrivateKey = bchLib.PrivateKey;
+var Script = bchLib.Script;
+var _ = bchLib.deps._;
 
 describe('Transaction.Input', function() {
 

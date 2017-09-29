@@ -1,6 +1,6 @@
 {
-  "name": "bcccore-lib",
-  "main": "./bcccore.min.js",
+  "name": "bch-lib",
+  "main": "./bch.min.js",
   "version": "0.0.1",
   "homepage": "http://openwalletstack.com",
   "description": "A Javascript library to build bitcoin cash and blockchain-based applications.",
@@ -9,8 +9,8 @@
   ],
   "keywords": [
     "bitcoin cash",
-    "bcccore",
-    "bcc",
+    "bch",
+    "bch",
     "satoshi"
   ],
   "license": "MIT",

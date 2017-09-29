@@ -1,9 +1,9 @@
-Bcccore Library
+Bch Lib
 =======
 
-[![NPM Package](https://img.shields.io/npm/v/bcccore-lib.svg?style=flat-square)](https://www.npmjs.org/package/bcccore-lib)
-[![Build Status](https://img.shields.io/travis/owstack/bcccore-lib.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/bcccore-lib)
-[![Coverage Status](https://img.shields.io/coveralls/owstack/bcccore-lib.svg?style=flat-square)](https://coveralls.io/r/owstack/bcccore-lib)
+[![NPM Package](https://img.shields.io/npm/v/bch-lib.svg?style=flat-square)](https://www.npmjs.org/package/bch-lib)
+[![Build Status](https://img.shields.io/travis/owstack/bch-lib.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/bch-lib)
+[![Coverage Status](https://img.shields.io/coveralls/owstack/bch-lib.svg?style=flat-square)](https://coveralls.io/r/owstack/bch-lib)
 
 A pure and powerful JavaScript Bitcoin Cash library.
 
@@ -22,33 +22,33 @@ Bitcoin Cash uses a different `sighash` for transaction signatures. The implemen
 ## Get Started
 
 ```
-npm install bcccore-lib
+npm install bch-lib
 ```
 
 ```
-bower install bcccore-lib
+bower install bch-lib
 ```
 
 ## Documentation
 
-The complete docs are hosted here: [bcccore documentation](http://bcccore.io/guide/). There's also a [bcccore API reference](http://bcccore.io/api/) available generated from the JSDocs of the project, where you'll find low-level details on each bcccore utility.
+The complete docs are hosted here: [bch documentation](http://bch.io/guide/). There's also a [bch API reference](http://bch.io/api/) available generated from the JSDocs of the project, where you'll find low-level details on each bch utility.
 
-- [Read the Developer Guide](http://bcccore.io/guide/)
-- [Read the API Reference](http://bcccore.io/api/)
+- [Read the Developer Guide](http://bch.io/guide/)
+- [Read the API Reference](http://bch.io/api/)
 
-To get community assistance and ask for help with implementation questions, please use our [community forums](https://forum.bcccore.io/).
+To get community assistance and ask for help with implementation questions, please use our [community forums](https://forum.bch.io/).
 
 ## Examples
 
-* [Generate a random address](https://github.com/owstack/bcccore-lib/blob/master/docs/examples.md#generate-a-random-address)
-* [Generate a address from a SHA256 hash](https://github.com/owstack/bcccore-lib/blob/master/docs/examples.md#generate-a-address-from-a-sha256-hash)
-* [Import an address via WIF](https://github.com/owstack/bcccore-lib/blob/master/docs/examples.md#import-an-address-via-wif)
-* [Create a Transaction](https://github.com/owstack/bcccore-lib/blob/master/docs/examples.md#create-a-transaction)
-* [Sign a Bitcoin Cash message](https://github.com/owstack/bcccore-lib/blob/master/docs/examples.md#sign-a-bitcoin-cash-message)
-* [Verify a Bitcoin Cash message](https://github.com/owstack/bcccore-lib/blob/master/docs/examples.md#verify-a-bitcoin-cash-message)
-* [Create an OP RETURN transaction](https://github.com/owstack/bcccore-lib/blob/master/docs/examples.md#create-an-op-return-transaction)
-* [Create a 2-of-3 multisig P2SH address](https://github.com/owstack/bcccore-lib/blob/master/docs/examples.md#create-a-2-of-3-multisig-p2sh-address)
-* [Spend from a 2-of-2 multisig P2SH address](https://github.com/owstack/bcccore-lib/blob/master/docs/examples.md#spend-from-a-2-of-2-multisig-p2sh-address)
+* [Generate a random address](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#generate-a-random-address)
+* [Generate a address from a SHA256 hash](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#generate-a-address-from-a-sha256-hash)
+* [Import an address via WIF](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#import-an-address-via-wif)
+* [Create a Transaction](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#create-a-transaction)
+* [Sign a Bitcoin Cash message](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#sign-a-bitcoin-cash-message)
+* [Verify a Bitcoin Cash message](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#verify-a-bitcoin-cash-message)
+* [Create an OP RETURN transaction](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#create-an-op-return-transaction)
+* [Create a 2-of-3 multisig P2SH address](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#create-a-2-of-3-multisig-p2sh-address)
+* [Spend from a 2-of-2 multisig P2SH address](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#spend-from-a-2-of-2-multisig-p2sh-address)
 
 
 ## Security
@@ -57,19 +57,19 @@ If you find a security issue, please email security@openwalletstack.com.
 
 ## Contributing
 
-Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/owstack/bcccore-lib/blob/master/CONTRIBUTING.md) file.
+Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/owstack/bch-lib/blob/master/CONTRIBUTING.md) file.
 
 ## Building the Browser Bundle
 
-To build a bcccore-lib full bundle for the browser:
+To build a bch-lib full bundle for the browser:
 
 ```sh
 gulp browser
 ```
 
-This will generate files named `bcccore.js` and `bcccore.min.js`.
+This will generate files named `bch.js` and `bch.min.js`.
 
-You can also use our pre-generated files, provided for each release along with a PGP signature by one of the project's maintainers. To get them, checkout a release commit (for example, https://github.com/owstack/bcccore-lib/commit/e33b6e3ba6a1e5830a079e02d949fce69ea33546 for v0.12.6).
+You can also use our pre-generated files, provided for each release along with a PGP signature by one of the project's maintainers. To get them, checkout a release commit (for example, https://github.com/owstack/bch-lib/commit/e33b6e3ba6a1e5830a079e02d949fce69ea33546 for v0.12.6).
 
 To verify signatures, use the following PGP keys:
 - @braydonf: https://pgp.mit.edu/pks/lookup?op=get&search=0x9BBF07CAC07A276D `D909 EFE6 70B5 F6CC 89A3 607A 9BBF 07CA C07A 276D`
@@ -81,8 +81,8 @@ To verify signatures, use the following PGP keys:
 ## Development & Tests
 
 ```sh
-git clone https://github.com/owstack/bcccore-lib
-cd bcccore-lib
+git clone https://github.com/owstack/bch-lib
+cd bch-lib
 npm install
 ```
 
@@ -97,6 +97,6 @@ or create a test coverage report (you can open `coverage/lcov-report/index.html`
 
 ## License
 
-Code released under [the MIT license](https://github.com/owstack/bcccore-lib/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/owstack/bch-lib/blob/master/LICENSE).
 
-Copyright 2017 Open Wallet Stack. Bcccore is a trademark maintained by Open Wallet Stack.
+Copyright 2017 Open Wallet Stack.

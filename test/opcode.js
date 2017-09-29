@@ -4,9 +4,9 @@ var chai = require('chai');
 var expect = chai.expect;
 var should = chai.should();
 
-var bcccore = require('..');
-var Opcode = bcccore.Opcode;
-var _ = bcccore.deps._;
+var bchLib = require('..');
+var Opcode = bchLib.Opcode;
+var _ = bchLib.deps._;
 
 describe('Opcode', function() {
 

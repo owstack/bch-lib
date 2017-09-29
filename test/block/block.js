@@ -3,14 +3,14 @@
 var chai = require('chai');
 var should = chai.should();
 
-var bcccore = require('../..');
-var BN = bcccore.crypto.BN;
-var BufferReader = bcccore.encoding.BufferReader;
-var BufferWriter = bcccore.encoding.BufferWriter;
-var BlockHeader = bcccore.BlockHeader;
-var Block = bcccore.Block;
+var bchLib = require('../..');
+var BN = bchLib.crypto.BN;
+var BufferReader = bchLib.encoding.BufferReader;
+var BufferWriter = bchLib.encoding.BufferWriter;
+var BlockHeader = bchLib.BlockHeader;
+var Block = bchLib.Block;
 var fs = require('fs');
-var Transaction = bcccore.Transaction;
+var Transaction = bchLib.Transaction;
 
 // https://test-bex.openwalletstack.com/block/000000000b99b16390660d79fcc138d2ad0c89a0d044c4201a02bdf1f61ffa11
 var dataRawBlockBuffer = fs.readFileSync('test/data/blk86756-testnet.dat');

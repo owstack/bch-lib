@@ -3,14 +3,14 @@
 var expect = require('chai').expect;
 var should = require('chai').should();
 
-var bcccore = require('..');
-var Address = bcccore.Address;
-var BN = bcccore.crypto.BN;
-var Constants = bcccore.Constants;
-var Networks = bcccore.Networks;
-var Point = bcccore.crypto.Point;
-var PublicKey = bcccore.PublicKey;
-var PrivateKey = bcccore.PrivateKey;
+var bchLib = require('..');
+var Address = bchLib.Address;
+var BN = bchLib.crypto.BN;
+var Constants = bchLib.Constants;
+var Networks = bchLib.Networks;
+var Point = bchLib.crypto.Point;
+var PublicKey = bchLib.PublicKey;
+var PrivateKey = bchLib.PrivateKey;
 
 /* jshint maxlen: 200 */
 

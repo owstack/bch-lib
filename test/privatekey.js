@@ -4,14 +4,14 @@ var chai = require('chai');
 var should = chai.should();
 var expect = chai.expect;
 
-var bcccore = require('..');
-var Base58Check = bcccore.encoding.Base58Check;
-var BN = bcccore.crypto.BN;
+var bchLib = require('..');
+var Base58Check = bchLib.encoding.Base58Check;
+var BN = bchLib.crypto.BN;
 var invalidbase58 = require('./data/bitcoind/base58_keys_invalid.json');
-var Networks = bcccore.Networks;
-var Point = bcccore.crypto.Point;
-var PrivateKey = bcccore.PrivateKey;
-var Constants = bcccore.Constants;
+var Networks = bchLib.Networks;
+var Point = bchLib.crypto.Point;
+var PrivateKey = bchLib.PrivateKey;
+var Constants = bchLib.Constants;
 var validbase58 = require('./data/bitcoind/base58_keys_valid.json');
 
 describe('PrivateKey', function() {
