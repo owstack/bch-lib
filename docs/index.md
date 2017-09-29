@@ -1,10 +1,10 @@
-# Bcccore v0.0.1
+# Bch Lib v0.0.1
 
 ## Principles
 
-Bitcoin Cash is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Bitcoin Cash network allows for highly resilient bitcoin cash infrastructure, and the developer community needs reliable, open-source tools to implement bitcoin cash apps and services. Bcccore provides a reliable API for JavaScript apps that need to interface with Bitcoin Cash.
+Bitcoin Cash is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Bitcoin Cash network allows for highly resilient bitcoin cash infrastructure, and the developer community needs reliable, open-source tools to implement bitcoin cash apps and services. Bch Lib provides a reliable API for JavaScript apps that need to interface with Bitcoin Cash.
 
-To get started, just `npm install bcccore` or `bower install bcccore`.
+To get started, just `npm install bch` or `bower install bch`.
 
 # Documentation Index
 
@@ -35,25 +35,25 @@ To get started, just `npm install bcccore` or `bower install bcccore`.
 
 Some functionality is implemented as a module that can be installed separately:
 
-* [Payment Protocol Support](https://github.com/owstack/bcccore-payment-protocol)
-* [Peer to Peer Networking](https://github.com/owstack/bcccore-p2p)
+* [Payment Protocol Support](https://github.com/owstack/bch-payment-protocol)
+* [Peer to Peer Networking](https://github.com/owstack/bch-p2p)
 * [Bitcoin Cash Core JSON-RPC](https://github.com/owstack/bitcoind-rpc)
-* [Payment Channels](https://github.com/owstack/bcccore-channel)
-* [Mnemonics](https://github.com/owstack/bcccore-mnemonic)
-* [Elliptical Curve Integrated Encryption Scheme](https://github.com/owstack/bcccore-ecies)
-* [Blockchain Explorers](https://github.com/owstack/bcccore-explorers)
-* [Signed Messages](https://github.com/owstack/bcccore-message)
+* [Payment Channels](https://github.com/owstack/bch-channel)
+* [Mnemonics](https://github.com/owstack/bch-mnemonic)
+* [Elliptical Curve Integrated Encryption Scheme](https://github.com/owstack/bch-ecies)
+* [Blockchain Explorers](https://github.com/owstack/bch-explorers)
+* [Signed Messages](https://github.com/owstack/bch-message)
 
 # Examples
 
 ## Create and Save a Private Key
 
 ```javascript
-var privateKey = new bcccore.PrivateKey();
+var privateKey = new bch.PrivateKey();
 
 var exported = privateKey.toWIF();
 // e.g. L3T1s1TYP9oyhHpXgkyLoJFGniEgkv2Jhi138d7R2yJ9F4QdDU2m
-var imported = bcccore.PrivateKey.fromWIF(exported);
+var imported = bch.PrivateKey.fromWIF(exported);
 var hexa = privateKey.toString();
 // e.g. 'b9de6e778fe92aa7edb69395556f843f1dce0448350112e14906efc2a80fa61a'
 ```
@@ -68,7 +68,7 @@ var address = privateKey.toAddress();
 
 ```javascript
 // Build a 2-of-3 address from public keys
-var p2shAddress = new bcccore.Address([publicKey1, publicKey2, publicKey3], 2);
+var p2shAddress = new bch.Address([publicKey1, publicKey2, publicKey3], 2);
 ```
 
 ## Request a Payment
@@ -78,7 +78,7 @@ var paymentInfo = {
   address: '1DNtTk4PUCGAdiNETAzQFWZiy2fCHtGnPx',
   amount: 120000 //satoshis
 };
-var uri = new bcccore.URI(paymentInfo).toString();
+var uri = new bch.URI(paymentInfo).toString();
 ```
 
 ## Create a Transaction

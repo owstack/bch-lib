@@ -4,9 +4,9 @@ var chai = require('chai');
 var expect = chai.expect;
 var should = chai.should();
 
-var bcccore = require('../..');
-var UnspentOutput = bcccore.Transaction.UnspentOutput;
-var _ = bcccore.deps._;
+var bchLib = require('../..');
+var UnspentOutput = bchLib.Transaction.UnspentOutput;
+var _ = bchLib.deps._;
 
 describe('UnspentOutput', function() {
 

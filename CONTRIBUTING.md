@@ -1,13 +1,13 @@
-Contributing to Bcccore
+Contributing to Bch Lib
 =======
 
-We're working hard to make *bcccore* the most powerful JavaScript library for working with bitcoin cash. Our goal is to have *bcccore* be a library that can be used by anyone interested in bitcoin cash, and to level expertise differences with great design and documentation.
+We're working hard to make *bch* the most powerful JavaScript library for working with bitcoin cash. Our goal is to have *bch* be a library that can be used by anyone interested in bitcoin cash, and to level expertise differences with great design and documentation.
 
 ## Community
 
 If there are any questions, etc., please feel to ask in one of the community channels:
 
-- https://github.com/owstack/bcccore-lib/issues (Development Issues)
+- https://github.com/owstack/bch-lib/issues (Development Issues)
 
 ## Quick Checklist
 
@@ -19,7 +19,7 @@ Ideally, please make sure to run:
 
 ## Design Guidelines
 
-These are some global design goals in bcccore that any change must adhere.
+These are some global design goals in bch that any change must adhere.
 
 ### D1 - Naming Matters
 
@@ -90,7 +90,7 @@ var bufferUtil = require('./util/buffer');
 
 #### G7 - Standard Methods
 
-When possible, bcccore objects should have standard methods on an instance prototype:
+When possible, bch objects should have standard methods on an instance prototype:
 * `toObject/toJSON` - A plain JavaScript object that `JSON.stringify` can call
 * `toString` - A string representation of the instance
 * `toBuffer` - A hex Buffer
@@ -100,7 +100,7 @@ These should have a matching static method that can be used for instantiation:
 * `fromString` - Should be able to instantiate with output from `toString`
 * `fromBuffer` - Should likewise be able to instantiate from output from `toBuffer`
 
-`JSON.stringify` and `JSON.parse` are expected to be handled outside of the scope of bcccore methods. For example, calling `JSON.stringify` on an bcccore object will behave as expected and call `transaction.toJSON()` and then stringify it:
+`JSON.stringify` and `JSON.parse` are expected to be handled outside of the scope of bch methods. For example, calling `JSON.stringify` on an bch object will behave as expected and call `transaction.toJSON()` and then stringify it:
 
 ```javascript
 var transactionString = JSON.stringify(transaction);
@@ -115,7 +115,7 @@ var tx = new Transaction(data);
 
 ### Errors
 
-#### E1 - Use bcccore.Errors
+#### E1 - Use bch.Errors
 
 We've designed a structure for Errors to follow and are slowly migrating to it.
 
@@ -205,14 +205,14 @@ Don't write long tests, write helper functions to make them be as short and conc
 
 Inputs for tests should not be generated randomly. Also, the type and structure of outputs should be checked.
 
-#### T3 - Require 'bcccore-lib' and Look up Classes from There
+#### T3 - Require 'bch-lib' and Look up Classes from There
 
-This helps to make tests more useful as examples, and more independent of where they are placed. This also helps prevent forgetting to include all submodules in the bcccore object.
+This helps to make tests more useful as examples, and more independent of where they are placed. This also helps prevent forgetting to include all submodules in the bchLib object.
 
 DO:
 ```javascript
-var bcccore = require('../');
-var PublicKey = bcccore.PublicKey;
+var bchLib = require('../');
+var PublicKey = bchLib.PublicKey;
 ```
 DON'T:
 ```javascript
@@ -245,7 +245,7 @@ git checkout -b remove/some-file
 
 We expect pull requests to be rebased to the master branch before merging:
 ```sh
-git remote add owstack git@github.com:owstack/bcccore-lib.git
+git remote add owstack git@github.com:owstack/bch-lib.git
 git pull --rebase owstack master
 ```
 
@@ -257,11 +257,11 @@ git push origin your_branch_name
 git push origin feature/some-new-stuff
 git push origin fix/some-bug
 ```
-Finally go to [github.com/owstack/bcccore](https://github.com/owstack/bcccore-lib) in your web browser and issue a new pull request.
+Finally go to [github.com/owstack/bch-lib](https://github.com/owstack/bch-lib) in your web browser and issue a new pull request.
 
-Main contributors will review your code and possibly ask for changes before your code is pulled in to the main repository.  We'll check that all tests pass, review the coding style, and check for general code correctness. If everything is OK, we'll merge your pull request and your code will be part of bcccore.
+Main contributors will review your code and possibly ask for changes before your code is pulled in to the main repository.  We'll check that all tests pass, review the coding style, and check for general code correctness. If everything is OK, we'll merge your pull request and your code will be part of bch-lib.
 
 If you have any questions feel free to post them to
-[github.com/owstack/owstack/bcccore-lib/issues](https://github.com/owstack/owstack/bcccore-lib/issues).
+[github.com/owstack/owstack/bch-lib/issues](https://github.com/owstack/owstack/bch-lib/issues).
 
 Thanks for your time and code!

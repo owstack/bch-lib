@@ -1,9 +1,9 @@
 # Transaction
-Bcccore provides a very simple API for creating transactions. We expect this API to be accessible for developers without knowing the working internals of bitcoin cash in deep detail. What follows is a small introduction to transactions with some basic knowledge required to use this API.
+Bch Lib provides a very simple API for creating transactions. We expect this API to be accessible for developers without knowing the working internals of bitcoin cash in deep detail. What follows is a small introduction to transactions with some basic knowledge required to use this API.
 
 A Transaction contains a set of inputs and a set of outputs. Each input contains a reference to another transaction's output, and a signature that allows the value referenced in that output to be used in this transaction.
 
-Note also that an output can be used only once. That's why there's a concept of "change address" in the bitcoin cash ecosystem: if an output of 10 BCC is available for me to spend, but I only need to transmit 1 BCC, I'll create a transaction with two outputs, one with 1 BCC that I want to spend, and the other with 9 BCC to a change address, so I can spend this 9 BCC with another private key that I own.
+Note also that an output can be used only once. That's why there's a concept of "change address" in the bitcoin cash ecosystem: if an output of 10 BCH is available for me to spend, but I only need to transmit 1 BCH, I'll create a transaction with two outputs, one with 1 BCH that I want to spend, and the other with 9 BCH to a change address, so I can spend this 9 BCH with another private key that I own.
 
 So, in order to transmit a valid transaction, you must know what other transactions on the network store outputs that have not been spent and that are available for you to spend (meaning that you have the set of keys that can validate you own those funds). The unspent outputs are usually referred to as "utxo"s.
 
@@ -29,7 +29,7 @@ You can also override the fee estimation with another amount, specified in satos
 
 ```javascript
 var transaction = new Transaction().fee(5430); // Minimum non-dust amount
-var transaction = new Transaction().fee(1e8);  // Generous fee of 1 BCC
+var transaction = new Transaction().fee(1e8);  // Generous fee of 1 BCH
 ```
 
 ## Multisig Transactions
@@ -75,9 +75,9 @@ transaction.applySignature(receivedSig);
 ```
 
 ## Adding inputs
-Transaction inputs are instances of either [Input](https://github.com/owstack/bcccore/tree/master/lib/transaction/input) or its subclasses. `Input` has some abstract methods, as there is no actual concept of a "signed input" in the bitcoin cash scripting system (just valid signatures for <tt>OP_CHECKSIG</tt> and similar opcodes). They are stored in the `input` property of `Transaction` instances.
+Transaction inputs are instances of either [Input](https://github.com/owstack/bch/tree/master/lib/transaction/input) or its subclasses. `Input` has some abstract methods, as there is no actual concept of a "signed input" in the bitcoin cash scripting system (just valid signatures for <tt>OP_CHECKSIG</tt> and similar opcodes). They are stored in the `input` property of `Transaction` instances.
 
-Bcccore contains two implementations of `Input`, one for spending _Pay to Public Key Hash_ outputs (called `PublicKeyHashInput`) and another to spend _Pay to Script Hash_ outputs for which the redeem script is a Multisig script (called `MultisigScriptHashInput`).
+Bch Lib contains two implementations of `Input`, one for spending _Pay to Public Key Hash_ outputs (called `PublicKeyHashInput`) and another to spend _Pay to Script Hash_ outputs for which the redeem script is a Multisig script (called `MultisigScriptHashInput`).
 
 All inputs have the following five properties:
 - `prevTxId`: a `Buffer` with the id of the transaction with the output this input is spending
@@ -90,7 +90,7 @@ Both `PublicKeyHashInput` and `MultisigScriptHashInput` cache the information ab
 
 Some methods related to adding inputs are:
 - `from`: A high level interface to add an input from a UTXO. It has a series of variants:
-  - `from(utxo)`: add an input from an [Unspent Transaction Output](http://bcccore.io/guide/unspentoutput.html). Currently, only P2PKH outputs are supported.
+  - `from(utxo)`: add an input from an [Unspent Transaction Output](http://bch.io/guide/unspentoutput.html). Currently, only P2PKH outputs are supported.
   - `from(utxos)`: same as above, but passing in an array of Unspent Outputs.
   - `from(utxo, publicKeys, threshold)`: add an input that spends a UTXO with a P2SH output for a Multisig script. The `publicKeys` argument is an array of public keys, and `threshold` is the number of required signatures in the Multisig script.
 
@@ -106,7 +106,7 @@ This input contains a set of signatures in a `signatures` property, and each tim
 ## Signing a Transaction
 The following methods are used to manage signatures for a transaction:
 - `getSignatures`: takes an array of `PrivateKey` or strings from which a `PrivateKey` can be instantiated; the transaction to be signed; the kind of [signature hash to use](https://bitcoin.org/en/developer-guide#signature-hash-types). Returns an array of objects with the following properties:
-  - `signature`: an instance of [Signature](https://github.com/owstack/bcccore/blob/master/lib/crypto/signature.js)
+  - `signature`: an instance of [Signature](https://github.com/owstack/bch/blob/master/lib/crypto/signature.js)
   - `prevTxId`: this input's `prevTxId`,
   - `outputIndex`: this input's `outputIndex`,
   - `inputIndex`: this input's index in the transaction
@@ -136,14 +136,14 @@ There are a series of methods used for serialization:
 - `toBufferWriter`: Uses an already existing BufferWriter to copy over the serialized transaction
 
 ## Serialization Checks
-When serializing, the bcccore library performs a series of checks. These can be disabled by providing an object to the `serialize` method with the checks that you'll like to skip.
+When serializing, the bch library performs a series of checks. These can be disabled by providing an object to the `serialize` method with the checks that you'll like to skip.
 - `disableLargeFees` avoids checking that the fee is no more than `Transaction.FEE_PER_KB * Transaction.FEE_SECURITY_MARGIN * size_in_kb`.
 - `disableSmallFees` avoids checking that the fee is less than `Transaction.FEE_PER_KB * size_in_kb / Transaction.FEE_SECURITY_MARGIN`.
 - `disableIsFullySigned` does not check if all inputs are fully signed
 - `disableDustOutputs` does not check for dust outputs being generated
 - `disableMoreOutputThanInput` avoids checking that the sum of the output amounts is less than or equal to the sum of the amounts for the outputs being spent in the transaction
 
-These are the current default values in the bcccore library involved on these checks:
+These are the current default values in the bch library involved on these checks:
 - `Transaction.FEE_PER_KB`: `10000` (satoshis per kilobyte)
 - `Transaction.FEE_SECURITY_MARGIN`: `15`
 - `Transaction.DUST_AMOUNT`: `546` (satoshis)
@@ -161,7 +161,7 @@ Internally, a `_changeIndex` property stores the index of the change output (so 
 ## Time-Locking transaction
 All bitcoin cash transactions contain a locktime field. The locktime indicates the earliest time a transaction can be added to the blockchain. Locktime allows signers to create time-locked transactions which will only become valid in the future, giving the signers a chance to change their minds. Locktime can be set in the form of a bitcoin cash block height (the transaction can only be included in a block with a higher height than specified) or a linux timestamp (transaction can only be confirmed after that time). For more information see [bitcoin's development guide section on locktime](https://bitcoin.org/en/developer-guide#locktime-and-sequence-number).
 
-In bcccore, you can set a `Transaction`'s locktime by using the methods `Transaction#lockUntilDate` and `Transaction#lockUntilBlockHeight`. You can also get a friendly version of the locktime field via `Transaction#getLockTime`;
+In bch, you can set a `Transaction`'s locktime by using the methods `Transaction#lockUntilDate` and `Transaction#lockUntilBlockHeight`. You can also get a friendly version of the locktime field via `Transaction#getLockTime`;
 
 For example:
 
@@ -174,4 +174,4 @@ console.log(transaction.getLockTime());
 ```
 
 ## Upcoming changes
-We're debating an API for Merge Avoidance, CoinJoin, Smart contracts, CoinSwap, and Stealth Addresses. We're expecting to have all of them by some time in 2015. Payment channel creation is available in the [bcccore-channel](https://github.com/owstack/bcccore-channel) module.
+We're debating an API for Merge Avoidance, CoinJoin, Smart contracts, CoinSwap, and Stealth Addresses. We're expecting to have all of them by some time in 2015. Payment channel creation is available in the [bch-channel](https://github.com/owstack/bch-channel) module.

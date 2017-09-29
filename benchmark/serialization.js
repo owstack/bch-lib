@@ -1,9 +1,8 @@
 'use strict';
 
 var benchmark = require('benchmark');
-var bcccore = require('..');
+var bchLib = require('..');
 var bitcoinjs = require('bitcoinjs-lib');
-var bcoin = require('bcoin');
 var async = require('async');
 var fullnode = require('fullnode');
 var blockData = require('./block-357238.json');
@@ -22,13 +21,13 @@ async.series([
     for (var i = 0; i < 100; i++) {
 
       // uint64le
-      var br = new bcccore.encoding.BufferWriter();
+      var br = new bchLib.encoding.BufferWriter();
       var num = Math.round(Math.random() * 10000000000000);
-      br.writeUInt64LEBN(new bcccore.crypto.BN(num));
+      br.writeUInt64LEBN(new bchLib.crypto.BN(num));
       buffers.push(br.toBuffer());
 
       // hashes
-      var data = bcccore.crypto.Hash.sha256sha256(new Buffer(32));
+      var data = bchLib.crypto.Hash.sha256sha256(new Buffer(32));
       hashBuffers.push(data);
     }
 
@@ -40,7 +39,7 @@ async.series([
         c = 0;
       }
       var buf = buffers[c];
-      var br = new bcccore.encoding.BufferReader(buf);
+      var br = new bchLib.encoding.BufferReader(buf);
       bn = br.readUInt64LEBN();
       c++;
     }
@@ -52,7 +51,7 @@ async.series([
         c = 0;
       }
       var buf = hashBuffers[c];
-      var br = new bcccore.encoding.BufferReader(buf);
+      var br = new bchLib.encoding.BufferReader(buf);
       reversed = br.readReverse();
       c++;
     }
@@ -79,20 +78,12 @@ async.series([
     var block2;
     var block3;
 
-    function bcccoreTest() {
-      block1 = bcccore.Block.fromString(blockData);
+    function bchTest() {
+      block1 = bchLib.Block.fromString(blockData);
     }
 
     function bitcoinJSTest() {
       block2 = bitcoinjs.Block.fromHex(blockData);
-    }
-
-    var parser = new bcoin.protocol.parser();
-
-    function bcoinTest() {
-      var raw = bcoin.utils.toArray(blockData, 'hex');
-      var data = parser.parseBlock(raw);
-      block3 = new bcoin.block(data, 'block');
     }
 
     var blockDataMessage = '0000000000000000' + blockData; // add mock leading magic and size
@@ -102,9 +93,8 @@ async.series([
     }
 
     var suite = new benchmark.Suite();
-    suite.add('bcccore', bcccoreTest, {maxTime: maxTime});
+    suite.add('bch', bchTest, {maxTime: maxTime});
     suite.add('bitcoinjs', bitcoinJSTest, {maxTime: maxTime});
-    suite.add('bcoin', bcoinTest, {maxTime: maxTime});
     suite.add('fullnode', fullnodeTest, {maxTime: maxTime});
     suite
       .on('cycle', function(event) {

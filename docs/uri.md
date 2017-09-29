@@ -10,7 +10,7 @@ bitcoincash:12A1MyfXbW6RhdRAZEqofac5jCQQjwEPBu?amount=1.2&message=Payment&label=
 ```
 
 ## URI Validation
-The main use that we expect you'll have for the `URI` class in bcccore is validating and parsing bitcoin URIs. A `URI` instance exposes the address as a bcccore `Address` object and the amount in Satoshis, if present.
+The main use that we expect you'll have for the `URI` class in bch is validating and parsing bitcoin URIs. A `URI` instance exposes the address as a bch `Address` object and the amount in Satoshis, if present.
 
 The code for validating URIs looks like this:
 

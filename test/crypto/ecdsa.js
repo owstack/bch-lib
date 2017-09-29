@@ -2,15 +2,15 @@
 
 var should = require('chai').should();
 
-var bcccore = require('../..');
-var BN = bcccore.crypto.BN;
-var Constants = bcccore.Constants;
-var ECDSA = bcccore.crypto.ECDSA;
-var Hash = bcccore.crypto.Hash;
-var point = bcccore.crypto.Point;
-var Privkey = bcccore.PrivateKey;
-var Pubkey = bcccore.PublicKey;
-var Signature = bcccore.crypto.Signature;
+var bchLib = require('../..');
+var BN = bchLib.crypto.BN;
+var Constants = bchLib.Constants;
+var ECDSA = bchLib.crypto.ECDSA;
+var Hash = bchLib.crypto.Hash;
+var point = bchLib.crypto.Point;
+var Privkey = bchLib.PrivateKey;
+var Pubkey = bchLib.PublicKey;
+var Signature = bchLib.crypto.Signature;
 var vectors = require('../data/ecdsa');
 
 describe('ECDSA', function() {
