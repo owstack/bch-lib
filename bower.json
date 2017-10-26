@@ -1,6 +1,6 @@
 {
   "name": "bch-lib",
-  "main": "./bch.min.js",
+  "main": "./bch-lib.min.js",
   "version": "0.0.1",
   "homepage": "http://openwalletstack.com",
   "description": "A Javascript library to build bitcoin cash and blockchain-based applications.",
@@ -9,7 +9,6 @@
   ],
   "keywords": [
     "bitcoin cash",
-    "bch",
     "bch",
     "satoshi"
   ],
