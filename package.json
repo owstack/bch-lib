@@ -33,18 +33,18 @@
     "request": "browser-request"
   },
   "dependencies": {
-    "bn.js": "=2.0.4",
-    "buffer-compare": "=1.0.0",
-    "elliptic": "=3.0.3",
-    "inherits": "=2.0.1",
+    "bn.js": "4.11.8",
+    "buffer-compare": "1.1.1",
+    "elliptic": "6.4.0",
+    "inherits": "2.0.3",
     "ows-common": "https://github.com/owstack/ows-common"
   },
   "devDependencies": {
     "brfs": "^1.2.0",
-    "chai": "^1.10.0",
+    "chai": "^4.1.2",
     "gulp": "^3.8.10",
     "ows-build": "https://github.com/owstack/ows-build",
-    "sinon": "^1.13.0"
+    "sinon": "^4.0.0"
   },
   "license": "MIT"
 }
