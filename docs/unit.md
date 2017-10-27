@@ -6,7 +6,7 @@ To understand the need of using the `Unit` class when dealing with unit conversi
 ```
 > 81.99 * 100000 // wrong
 8198999.999999999
-> var bchLib = require('bch-lib');
+> var bchLib = require('@owstack/bch-lib');
 > var Unit = bchLib.Unit;
 > Unit.fromMilis(81.99).toSatoshis() // correct
 8199000

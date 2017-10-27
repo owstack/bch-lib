@@ -42,7 +42,7 @@ var transaction = new bch.Transaction()
 
 ## Sign a Bitcoin Cash message
 ```javascript
-var Message = require('bch-message');
+var Message = require('@owstack/bch-message');
 
 var privateKey = new bch.PrivateKey('L23PpjkBQqpAF4vbMHNfTZAb3KFPBSawQ7KinFTzz7dxq6TZX8UA');
 var message = new Message('This is an example of a signed message.');
@@ -52,7 +52,7 @@ var signature = message.sign(privateKey);
 
 ## Verify a Bitcoin Cash message
 ```javascript
-var Message = require('bch-message');
+var Message = require('@owstack/bch-message');
 
 var address = '13Js7D3q4KvfSqgKN8LpNq57gcahrVc5JZ';
 var signature = 'IBOvIfsAs/da1e36W8kw1cQOPqPVXCW5zJgNQ5kI8m57FycZXdeFmeyoIqJSREzE4W7vfDmdmPk0HokuJPvgPPE=';
