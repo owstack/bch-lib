@@ -60,4 +60,4 @@ bchLib.deps._ = owsCommon.deps._;
 // Internal usage, exposed for testing/advanced tweaking
 bchLib.Transaction.sighash = require('./lib/transaction/sighash');
 
-module.exports = bch;
+module.exports = bchLib;
