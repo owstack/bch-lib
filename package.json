@@ -43,7 +43,7 @@
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
-    "@owstack/ows-build": "^0.0.1",
+    "@owstack/ows-build": "^0.0.2",
     "sinon": "^1.13.0"
   },
   "license": "MIT"
