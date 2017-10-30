@@ -1,6 +1,6 @@
 {
   "name": "@owstack/bch-lib",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Javascript library to build bitcoin cash and blockchain-based applications.",
   "main": "index.js",
   "scripts": {
@@ -33,17 +33,17 @@
     "request": "browser-request"
   },
   "dependencies": {
+    "@owstack/ows-common": "^0.0.3",
     "bn.js": "=2.0.4",
     "buffer-compare": "=1.0.0",
     "elliptic": "=3.0.3",
-    "inherits": "=2.0.1",
-    "@owstack/ows-common": "^0.0.1"
+    "inherits": "=2.0.1"
   },
   "devDependencies": {
+    "@owstack/ows-build": "^0.0.3",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
-    "@owstack/ows-build": "^0.0.2",
     "sinon": "^1.13.0"
   },
   "license": "MIT"
