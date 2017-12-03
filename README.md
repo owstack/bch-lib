@@ -1,7 +1,7 @@
 Bch Lib
 =======
 
-[![NPM Package](https://img.shields.io/npm/v/bch-lib.svg?style=flat-square)](https://www.npmjs.org/package/bch-lib)
+[![NPM Package](https://img.shields.io/npm/v/@owstack/bch-lib.svg?style=flat-square)](https://www.npmjs.org/package/@owstack/bch-lib)
 [![Build Status](https://img.shields.io/travis/owstack/bch-lib.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/bch-lib)
 [![Coverage Status](https://img.shields.io/coveralls/owstack/bch-lib.svg?style=flat-square)](https://coveralls.io/r/owstack/bch-lib)
 
