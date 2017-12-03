@@ -21,3 +21,5 @@ bch-lib.min.js
 bch-lib.js.sig
 bch-lib.min.js.sig
 tests.js
+
+package-lock.json
