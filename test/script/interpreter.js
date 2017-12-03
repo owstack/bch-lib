@@ -146,7 +146,7 @@ describe('Interpreter', function() {
       var signature = tx.getSignatures(privateKey, 1)[inputIndex].signature;
 
       var scriptSig = Script.buildPublicKeyHashIn(publicKey, signature);
-      var flags = Interpreter.SCRIPT_VERIFY_P2SH | Interpreter.SCRIPT_VERIFY_STRICTENC;
+      var flags = Interpreter.SCRIPT_VERIFY_P2SH | Interpreter.SCRIPT_VERIFY_STRICTENC | Interpreter.SCRIPT_ENABLE_SIGHASH_FORKID;
       var verified = Interpreter().verify(scriptSig, scriptPubkey, tx, inputIndex, flags);
       verified.should.equal(true);
     });
