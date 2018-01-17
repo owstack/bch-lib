@@ -16,10 +16,8 @@ report
 .DS_Store
 
 
-bch-lib.js
-bch-lib.min.js
-bch-lib.js.sig
-bch-lib.min.js.sig
+*-lib.js
+*-lib.min.js
+*-lib.js.sig
+*-lib.min.js.sig
 tests.js
-
-package-lock.json
