@@ -12,7 +12,6 @@ module.exports.crypto.Signature = require('./lib/crypto/signature');
 // main bitcoin library
 module.exports.Constants = require('./lib/common/constants');
 module.exports.Networks = require('./lib/networks');
-module.exports.Script.Interpreter = require('./lib/script/interpreter');
 module.exports.Transaction.Sighash = require('./lib/transaction/sighash');
 module.exports.Transaction.UnspentOutput = require('./lib/transaction/unspentoutput');
 module.exports.URI = require('./lib/uri');
