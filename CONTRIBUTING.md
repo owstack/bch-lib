@@ -115,7 +115,7 @@ var tx = new Transaction(data);
 
 ### Errors
 
-#### E1 - Use owsCommon.Errors
+#### E1 - Use satoshiCommon.Errors
 
 We've designed a structure for Errors to follow and are slowly migrating to it.
 

@@ -34,10 +34,8 @@
     "request": "browser-request"
   },
   "dependencies": {
-    "@owstack/ows-common": "^0.0.3",
     "@owstack/satoshi-common-lib": "^0.1.0",
     "buffer-compare": "=1.0.0",
-    "elliptic": "=3.0.3",
     "inherits": "=2.0.1"
   },
   "devDependencies": {
