@@ -1,4 +1,4 @@
-# Bch Lib v0.0.1
+# Bch Lib v0.1.0
 
 ## Principles
 
