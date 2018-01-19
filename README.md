@@ -1,4 +1,4 @@
-Bch Lib
+BCH Lib
 =======
 
 [![NPM Package](https://img.shields.io/npm/v/@owstack/bch-lib.svg?style=flat-square)](https://www.npmjs.org/package/@owstack/bch-lib)
@@ -7,9 +7,9 @@ Bch Lib
 
 A pure and powerful JavaScript Bitcoin Cash library.
 
-## Attribution
+## What this provides
 
-This repository was created by copy forking [btccore-lib 09b97ac](https://github.com/owstack/btccore-lib/commit/09b97ac96cf442a170f52d865ce77089b4f896f9).
+This repository extends @owstack/satoshi-common-lib with bitcoin-cash fork changes
 
 ## Principles
 
@@ -17,7 +17,7 @@ Bitcoin Cash is an other powerful peer-to-peer platform for the next generation 
 
 ## Bitcoin Cash vs. Bitcoin
 
-Bitcoin Cash uses a different `sighash` for transaction signatures. The implementation in bitcore cash has been tested agains the original bitcoin cash test vectors (see sighash.json in `/test`). `bitcoin cash` modifications in script evaluation has not been implemented yet.
+Bitcoin Cash uses a different `sighash` for transaction signatures. The implementation in bitcore cash has been tested against the original bitcoin cash test vectors (see sighash.json in `/test`). `bitcoin cash` modifications in script evaluation has not been implemented yet.
 
 ## Get Started
 
@@ -28,15 +28,6 @@ npm install bch-lib
 ```
 bower install bch-lib
 ```
-
-## Documentation
-
-The complete docs are hosted here: [bch documentation](http://bch.io/guide/). There's also a [bch API reference](http://bch.io/api/) available generated from the JSDocs of the project, where you'll find low-level details on each bch utility.
-
-- [Read the Developer Guide](http://bch.io/guide/)
-- [Read the API Reference](http://bch.io/api/)
-
-To get community assistance and ask for help with implementation questions, please use our [community forums](https://forum.bch.io/).
 
 ## Examples
 
