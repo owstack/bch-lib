@@ -2,8 +2,12 @@
 
 var bchLib = require('./lib');
 
-bchLib.Transaction.Sighash = require('./lib/transaction/sighash');
+var Sighash = require('./lib/transaction/sighash');
+bchLib.Transaction.Sighash.sighash = Sighash.sighash;
+bchLib.Transaction.Sighash.sign = Sighash.sign;
+bchLib.Transaction.Sighash.verify = Sighash.verify;
 bchLib.Transaction.UnspentOutput = require('./lib/transaction/unspentoutput');
+
 bchLib.URI = require('./lib/uri');
 bchLib.Unit = require('./lib/unit');
 
