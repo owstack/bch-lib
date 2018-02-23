@@ -558,4 +558,31 @@ describe('Address', function() {
     });
   });
 
+  describe('cashaddr support', function() {
+      var testcases = {
+          '1BpEi6DfDAUFd7GtittLSdBeYJvcoaVggu':	'bitcoincash:qpm2qsznhks23z7629mms6s4cwef74vcwvy22gdx6a',
+          '1KXrWXciRDZUpQwQmuM1DbwsKDLYAYsVLR':	'bitcoincash:qr95sy3j9xwd2ap32xkykttr4cvcu7as4y0qverfuy',
+          '16w1D5WRVKJuZUsSRzdLp9w3YGcgoxDXb':	'bitcoincash:qqq3728yw0y47sqn6l2na30mcw6zm78dzqre909m2r',
+          '3CWFddi6m4ndiGyKqzYvsFYagqDLPVMTzC':	'bitcoincash:ppm2qsznhks23z7629mms6s4cwef74vcwvn0h829pq',
+          '3LDsS579y7sruadqu11beEJoTjdFiFCdX4':	'bitcoincash:pr95sy3j9xwd2ap32xkykttr4cvcu7as4yc93ky28e',
+          '31nwvkZwyPdgzjBJZXfDmSWsC4ZLKpYyUw':	'bitcoincash:pqq3728yw0y47sqn6l2na30mcw6zm78dzq5ucqzc37'
+      };
+      describe('converting legacy addresses to cashaddr', function() {
+        Object.keys(testcases).forEach(function(legacyAddress) {
+            it('should convert ' + legacyAddress + ' to ' + testcases[legacyAddress], function() {
+                var address = Address.fromString(legacyAddress);
+                address.toCashaddrString().should.equal(testcases[legacyAddress]);
+            });
+        });
+      });
+      describe('converting cashaddr string to Address', function() {
+        Object.keys(testcases).forEach(function(legacyAddress) {
+            it('should convert ' + testcases[legacyAddress] + ' to an instance of Address', function() {
+                var address = Address.fromCashaddrString(testcases[legacyAddress]);
+                address.toString().should.equal(legacyAddress);
+            });
+        });
+      });
+  });
+
 });
