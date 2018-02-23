@@ -211,7 +211,7 @@ describe('PrivateKey', function() {
     });
 
     it('input json should correctly initialize network field', function() {
-      [Constants.LIVENET, Constants.TESTNET, 'mainnet'].forEach(function (net) {
+      [Constants.LIVENET, Constants.TESTNET].forEach(function (net) {
         var pk = PrivateKey.fromObject({
           bn: '96c132224121b509b7d0a16245e957d9192609c5637c6228311287b1be21627a',
           compressed: false,
@@ -277,20 +277,20 @@ describe('PrivateKey', function() {
     it('should output known livenet address for console', function() {
       var privkey = PrivateKey.fromWIF('L3T1s1TYP9oyhHpXgkyLoJFGniEgkv2Jhi138d7R2yJ9F4QdDU2m');
       privkey.inspect().should.equal(
-        '<PrivateKey: b9de6e778fe92aa7edb69395556f843f1dce0448350112e14906efc2a80fa61a, network: livenet>'
+        '<PrivateKey: b9de6e778fe92aa7edb69395556f843f1dce0448350112e14906efc2a80fa61a, network: bitcoincash>'
       );
     });
 
     it('should output known testnet address for console', function() {
       var privkey = PrivateKey.fromWIF('cR4qogdN9UxLZJXCNFNwDRRZNeLRWuds9TTSuLNweFVjiaE4gPaq');
       privkey.inspect().should.equal(
-        '<PrivateKey: 67fd2209ce4a95f6f1d421ab3fbea47ada13df11b73b30c4d9a9f78cc80651ac, network: testnet>'
+        '<PrivateKey: 67fd2209ce4a95f6f1d421ab3fbea47ada13df11b73b30c4d9a9f78cc80651ac, network: bchtest>'
       );
     });
 
     it('outputs "uncompressed" for uncompressed imported WIFs', function() {
       var privkey = PrivateKey.fromWIF(wifLivenetUncompressed);
-      privkey.inspect().should.equal('<PrivateKey: 96c132224121b509b7d0a16245e957d9192609c5637c6228311287b1be21627a, network: livenet, uncompressed>');
+      privkey.inspect().should.equal('<PrivateKey: 96c132224121b509b7d0a16245e957d9192609c5637c6228311287b1be21627a, network: bitcoincash, uncompressed>');
     });
   });
 
