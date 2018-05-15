@@ -9,34 +9,21 @@ A pure and powerful JavaScript Bitcoin Cash library.
 
 ## Attribution
 
-This repository was created by copy forking [btccore-lib 09b97ac](https://github.com/owstack/btccore-lib/commit/09b97ac96cf442a170f52d865ce77089b4f896f9).
+This repository was created by copy forking [bitcore-lib 09b97ac](https://github.com/bitpay/bitcore-lib/commit/09b97ac96cf442a170f52d865ce77089b4f896f9).
 
 ## Principles
 
-Bitcoin Cash is an other powerful peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Bitcoin Cash network allows for highly resilient bitcoin cash infrastructure, and the developer community needs reliable, open-source tools to implement bitcoin cash apps and services.
+Bitcoin Cash is a powerful peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Bitcoin Cash network allows for highly resilient bitcoin cash infrastructure, and the developer community needs reliable, open-source tools to implement bitcoin cash apps and services.
 
 ## Bitcoin Cash vs. Bitcoin
 
-Bitcoin Cash uses a different `sighash` for transaction signatures. The implementation in bitcore cash has been tested agains the original bitcoin cash test vectors (see sighash.json in `/test`). `bitcoin cash` modifications in script evaluation has not been implemented yet.
+Bitcoin Cash uses an optional alternate address format called "cashaddr". It also has several additional changes to the script interpreter that allow the basics for smart contracts.
 
 ## Get Started
 
 ```
-npm install bch-lib
+npm install @owstack/bch-lib
 ```
-
-```
-bower install bch-lib
-```
-
-## Documentation
-
-The complete docs are hosted here: [bch documentation](http://bch.io/guide/). There's also a [bch API reference](http://bch.io/api/) available generated from the JSDocs of the project, where you'll find low-level details on each bch utility.
-
-- [Read the Developer Guide](http://bch.io/guide/)
-- [Read the API Reference](http://bch.io/api/)
-
-To get community assistance and ask for help with implementation questions, please use our [community forums](https://forum.bch.io/).
 
 ## Examples
 
@@ -68,15 +55,6 @@ gulp browser
 ```
 
 This will generate files named `bch.js` and `bch.min.js`.
-
-You can also use our pre-generated files, provided for each release along with a PGP signature by one of the project's maintainers. To get them, checkout a release commit (for example, https://github.com/owstack/bch-lib/commit/e33b6e3ba6a1e5830a079e02d949fce69ea33546 for v0.12.6).
-
-To verify signatures, use the following PGP keys:
-- @braydonf: https://pgp.mit.edu/pks/lookup?op=get&search=0x9BBF07CAC07A276D `D909 EFE6 70B5 F6CC 89A3 607A 9BBF 07CA C07A 276D`
-- @gabegattis: https://pgp.mit.edu/pks/lookup?op=get&search=0x441430987182732C `F3EA 8E28 29B4 EC93 88CB  B0AA 4414 3098 7182 732C`
-- @kleetus: https://pgp.mit.edu/pks/lookup?op=get&search=0x33195D27EF6BDB7F `F8B0 891C C459 C197 65C2 5043 3319 5D27 EF6B DB7F`
-- @matiu: https://pgp.mit.edu/pks/lookup?op=get&search=0x9EDE6DE4DE531FAC `25CE ED88 A1B1 0CD1 12CD  4121 9EDE 6DE4 DE53 1FAC`
-
 
 ## Development & Tests
 
