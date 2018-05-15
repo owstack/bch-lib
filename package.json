@@ -34,13 +34,14 @@
   },
   "dependencies": {
     "@owstack/ows-common": "^0.0.5",
+    "bchaddrjs": "^0.2.0",
     "bn.js": "=4.11.8",
     "buffer-compare": "=1.1.1",
     "elliptic": "=6.4.0",
     "inherits": "=2.0.1"
   },
   "devDependencies": {
-    "@owstack/ows-build": "^0.0.3",
+    "@owstack/ows-build": "0.0.11",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
