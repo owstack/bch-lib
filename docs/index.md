@@ -4,7 +4,7 @@
 
 Bitcoin Cash is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Bitcoin Cash network allows for highly resilient bitcoin cash infrastructure, and the developer community needs reliable, open-source tools to implement bitcoin cash apps and services. Bch Lib provides a reliable API for JavaScript apps that need to interface with Bitcoin Cash.
 
-To get started, just `npm install bch` or `bower install bch`.
+To get started, just `npm install @owstack/bch-lib` or `bower install @owstack/bch-lib`.
 
 # Documentation Index
 
