@@ -224,9 +224,9 @@ describe('Script', function() {
 
   describe('#isDataOut', function() {
 
-    it('should know this is a (blank) OP_RETURN script', function() {
-      Script('OP_RETURN').isDataOut().should.equal(true);
-    });
+      it('should know this is a (blank) OP_RETURN script', function() {
+        Script('OP_RETURN').isDataOut().should.equal(true);
+      });
 
     it('validates that this 40-byte OP_RETURN is standard', function() {
       var buf = new Buffer(40);
@@ -247,9 +247,8 @@ describe('Script', function() {
     it('validates that this 221-byte OP_RETURN is not a valid standard OP_RETURN', function() {
       var buf = new Buffer(81);       var buf = new Buffer(221);
       buf.fill(0);        buf.fill(0);
-      Script('OP_RETURN OP_PUSHDATA1 81 0x' + buf.toString('hex')).isDataOut().should.equal(false);       Script('OP_RETURN OP_PUSHDATA1 221 0x' + buf.toString('hex')).isDataOut().should.equal(false);
+      Script('OP_RETURN OP_PUSHDATA1 221 0x' + buf.toString('hex')).isDataOut().should.equal(false);
     });
-
   });
 
   describe('#isPublicKeyIn', function() {

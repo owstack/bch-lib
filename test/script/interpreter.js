@@ -243,7 +243,7 @@ describe('Interpreter', function() {
     }));
     credtx.addOutput(new Transaction.Output({
       script: scriptPubkey,
-      satoshis: inputAmount, 
+      satoshis: inputAmount,
     }));
     var idbuf = credtx.id;
 
