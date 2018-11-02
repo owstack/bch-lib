@@ -11,7 +11,6 @@ bchLib.version = 'v' + require('./package.json').version;
 bchLib.Address = require('./lib/address');
 bchLib.Block = require('./lib/block');
 bchLib.BlockHeader = require('./lib/block/blockheader');
-bchLib.Constants = require('./lib/common/constants');
 bchLib.MerkleBlock = require('./lib/block/merkleblock');
 bchLib.Networks = require('./lib/networks');
 bchLib.Opcode = require('./lib/opcode');
