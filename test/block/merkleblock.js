@@ -2,9 +2,10 @@
 
 var should = require('chai').should();
 
+var owsCommon = require('@owstack/ows-common');
 var bchLib = require('../..');
-var BufferReader = bchLib.encoding.BufferReader;
-var BufferWriter = bchLib.encoding.BufferWriter;
+var BufferReader = owsCommon.encoding.BufferReader;
+var BufferWriter = owsCommon.encoding.BufferWriter;
 var data = require('../data/merkleblocks.js');
 var MerkleBlock = bchLib.MerkleBlock;
 var Transaction = bchLib.Transaction;

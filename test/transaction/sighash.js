@@ -3,9 +3,11 @@
 var chai = require('chai');
 var should = chai.should();
 
-var bchLib = require('../../');
-var BN = bchLib.crypto.BN;
-var Buffer = bchLib.deps.Buffer;
+var owsCommon = require('@owstack/ows-common');
+var keyLib = require('@owstack/key-lib');
+var bchLib = require('../..');
+var BN = owsCommon.BN;
+var Buffer = owsCommon.deps.Buffer;
 var Script = bchLib.Script;
 var Transaction = bchLib.Transaction;
 var sighash = Transaction.sighash;

@@ -2,20 +2,22 @@
 
 var expect = require('chai').expect;
 
+var owsCommon = require('@owstack/ows-common');
+var keyLib = require('@owstack/key-lib');
 var bchLib = require('../../..');
 var Address = bchLib.Address;
-var errors = bchLib.errors;
+var errors = owsCommon.errors;
 var Input = bchLib.Transaction.Input;
-var Networks = bchLib.Networks;
-var PrivateKey = bchLib.PrivateKey;
+var Networks = keyLib.Networks;
+var PrivateKey = keyLib.PrivateKey;
 var Script = bchLib.Script;
-var _ = bchLib.deps._;
+var lodash = owsCommon.deps.lodash;
 
 describe('Transaction.Input', function() {
 
   var privateKey = new PrivateKey('KwF9LjRraetZuEjR8VqEq539z137LW5anYDUnVK11vM3mNMHTWb4');
   var publicKey = privateKey.publicKey;
-  var address = new Address(publicKey, Networks.livenet);
+  var address = new Address(publicKey, 'BCH');
   var output = {
     address: '33zbk2aSZYdNbRsMPPt6jgy6Kq1kQreqeb',
     prevTxId: '66e64ef8a3b384164b78453fa8c8194de9a473ba14f89485a0e433699daec140',
@@ -52,7 +54,7 @@ describe('Transaction.Input', function() {
 
   it('has abstract methods: "getSignatures", "isFullySigned", "addSignature", "clearSignatures"', function() {
     var input = new Input(output);
-    _.each(['getSignatures', 'isFullySigned', 'addSignature', 'clearSignatures'], function(method) {
+    lodash.each(['getSignatures', 'isFullySigned', 'addSignature', 'clearSignatures'], function(method) {
       expect(function() {
         return input[method]();
       }).to.throw(errors.AbstractMethodInvoked);

@@ -5,17 +5,19 @@
 var expect = require('chai').expect;
 var should = require('chai').should();
 
+var owsCommon = require('@owstack/ows-common');
+var keyLib = require('@owstack/key-lib');
 var bchLib = require('../..');
-var errors = bchLib.errors;
+var errors = owsCommon.errors;
 var Script = bchLib.Script;
-var PrivateKey = bchLib.PrivateKey;
+var PrivateKey = keyLib.PrivateKey;
 var Transaction = bchLib.Transaction;
 var TransactionSignature = bchLib.Transaction.Signature;
-var _ = bchLib.deps._;
+var lodash = owsCommon.deps.lodash;
 
 describe('TransactionSignature', function() {
 
-  var fromAddress = 'mszYqVnqKoQx4jcTdJXxwKAissE3Jbrrc1';
+  var fromAddress = 'bchtest:qzydnyc75u7kp6hhu4n3alq922u39ygl9gur0jmaup';
   var privateKey = 'cSBnVM4xvxarwGQuAfQFwqDg9k5tErHUHzgWsEfD4zdwUasvqRVY';
   var simpleUtxoWith100000Satoshis = {
     address: fromAddress,

@@ -5,14 +5,16 @@
 var expect = require('chai').expect;
 var should = require('chai').should();
 
+var owsCommon = require('@owstack/ows-common');
+var keyLib = require('@owstack/key-lib');
 var bchLib = require('../..');
-var BN = bchLib.crypto.BN;
-var BufferWriter = bchLib.encoding.BufferWriter;
-var BufferReader = bchLib.encoding.BufferReader;
-var errors = bchLib.errors;
+var BN = owsCommon.BN;
+var BufferWriter = owsCommon.encoding.BufferWriter;
+var BufferReader = owsCommon.encoding.BufferReader;
+var errors = owsCommon.errors;
 var Output = bchLib.Transaction.Output;
 var Script = bchLib.Script;
-var _ = bchLib.deps._;
+var lodash = owsCommon.deps.lodash;
 
 describe('Output', function() {
   var output = new Output({
@@ -153,7 +155,7 @@ describe('Output', function() {
 
   it('#toObject roundtrip will handle an invalid (null) script', function() {
     var invalidOutputScript = new Buffer('0100000000000000014c', 'hex');
-    var br = new bchLib.encoding.BufferReader(invalidOutputScript);
+    var br = new BufferReader(invalidOutputScript);
     var output = Output.fromBufferReader(br);
     var output2 = new Output(output.toObject());
     should.equal(output2.script, null);
@@ -162,7 +164,7 @@ describe('Output', function() {
 
   it('inspect will work with an invalid (null) script', function() {
     var invalidOutputScript = new Buffer('0100000000000000014c', 'hex');
-    var br = new bchLib.encoding.BufferReader(invalidOutputScript);
+    var br = new BufferReader(invalidOutputScript);
     var output = Output.fromBufferReader(br);
     output.inspect().should.equal('<Output (1 sats) 4c>');
   });

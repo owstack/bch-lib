@@ -3,8 +3,9 @@
 var expect = require('chai').expect;
 var should = require('chai').should();
 
+var owsCommon = require('@owstack/ows-common');
 var bchLib = require('..');
-var errors = bchLib.errors;
+var errors = owsCommon.errors;
 var Unit = bchLib.Unit;
 
 describe('Unit', function() {

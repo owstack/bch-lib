@@ -33,14 +33,13 @@
     "request": "browser-request"
   },
   "dependencies": {
-    "@owstack/ows-common": "^0.0.3",
-    "bn.js": "=2.0.4",
+    "@owstack/ows-common": "^0.0.8",
+    "@owstack/key-lib": "^0.0.8",
     "buffer-compare": "=1.0.0",
-    "elliptic": "=3.0.3",
     "inherits": "=2.0.1"
   },
   "devDependencies": {
-    "@owstack/ows-build": "^0.0.3",
+    "@owstack/ows-build": "^0.0.12",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.8.10",

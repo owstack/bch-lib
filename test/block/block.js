@@ -3,10 +3,12 @@
 var chai = require('chai');
 var should = chai.should();
 
+var owsCommon = require('@owstack/ows-common');
+var keyLib = require('@owstack/key-lib');
 var bchLib = require('../..');
-var BN = bchLib.crypto.BN;
-var BufferReader = bchLib.encoding.BufferReader;
-var BufferWriter = bchLib.encoding.BufferWriter;
+var BN = owsCommon.BN;
+var BufferReader = owsCommon.encoding.BufferReader;
+var BufferWriter = owsCommon.encoding.BufferWriter;
 var BlockHeader = bchLib.BlockHeader;
 var Block = bchLib.Block;
 var fs = require('fs');

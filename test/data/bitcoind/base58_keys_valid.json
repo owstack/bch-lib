@@ -1,6 +1,6 @@
 [
   [
-    "1AGNa15ZQXAZUgFiqJ2i7Z2DPU2J6hW62i",
+    "bitcoincash:qpj6zczese9zlk78exdywgag89duduvgavzjep9ega",
     "65a16059864a2fdbc7c99a4723a8395bc6f188eb",
     {
       "addrType": "pubkey",
@@ -9,7 +9,7 @@
     }
   ],
   [
-    "3CMNFxN1oHBc4R1EpboAL5yzHGgE611Xou",
+    "bitcoincash:pp60yz0ka2g8ut4y3a604czhs2hg5ejj2ugn82jfsr",
     "74f209f6ea907e2ea48f74fae05782ae8a665257",
     {
       "addrType": "script",
@@ -18,7 +18,7 @@
     }
   ],
   [
-    "mo9ncXisMeAoXwqcV5EWuyncbmCcQN4rVs",
+    "bchtest:qpfuqvradpg65r88sfd63q7xhkddys45scrmspqp5w",
     "53c0307d6851aa0ce7825ba883c6bd9ad242b486",
     {
       "addrType": "pubkey",
@@ -27,7 +27,7 @@
     }
   ],
   [
-    "2N2JD6wb56AfK4tfmM6PwdVmoYk2dCKf4Br",
+    "bchtest:pp35nfqcl3zh35g2xu44fdzu9qxv33pc9u35p0gcjl",
     "6349a418fc4578d10a372b54b45c280cc8c4382f",
     {
       "addrType": "script",
@@ -72,7 +72,7 @@
     }
   ],
   [
-    "1Ax4gZtb7gAit2TivwejZHYtNNLT18PUXJ",
+    "bitcoincash:qpkjx9tvh0wvs2j6glhwfsk8ckpurzmt7sahrdxqwm",
     "6d23156cbbdcc82a5a47eee4c2c7c583c18b6bf4",
     {
       "addrType": "pubkey",
@@ -81,7 +81,7 @@
     }
   ],
   [
-    "3QjYXhTkvuj8qPaXHTTWb5wjXhdsLAAWVy",
+    "bitcoincash:pr7v23sd6m3yslrawkcevd39mg8g7nzew5zmfd0lrt",
     "fcc5460dd6e2487c7d75b1963625da0e8f4c5975",
     {
       "addrType": "script",
@@ -90,7 +90,7 @@
     }
   ],
   [
-    "n3ZddxzLvAY9o7184TB4c6FJasAybsw4HZ",
+    "bchtest:qrcagu8ekq3hpl0v9e4hpzcg43p3haa97uc28z0h8l",
     "f1d470f9b02370fdec2e6b708b08ac431bf7a5f7",
     {
       "addrType": "pubkey",
@@ -99,7 +99,7 @@
     }
   ],
   [
-    "2NBFNJTktNa7GZusGbDbGKRZTxdK9VVez3n",
+    "bchtest:przhjdpv93xfygpqtckdc2zkzuzqeyj2pg4x8klehh",
     "c579342c2c4c9220205e2cdc285617040c924a0a",
     {
       "addrType": "script",
@@ -144,7 +144,7 @@
     }
   ],
   [
-    "1C5bSj1iEGUgSTbziymG7Cn18ENQuT36vv",
+    "bitcoincash:qpuc0n9220gzezrnfpl0jxt80nfak7nfzgta2l0h06",
     "7987ccaa53d02c8873487ef919677cd3db7a6912",
     {
       "addrType": "pubkey",
@@ -153,7 +153,7 @@
     }
   ],
   [
-    "3AnNxabYGoTxYiTEZwFEnerUoeFXK2Zoks",
+    "bitcoincash:pp3me3t9l8ngacqcnh2ucel3krjlqt69ev4caw2y4q",
     "63bcc565f9e68ee0189dd5cc67f1b0e5f02f45cb",
     {
       "addrType": "script",
@@ -162,7 +162,7 @@
     }
   ],
   [
-    "n3LnJXCqbPjghuVs8ph9CYsAe4Sh4j97wk",
+    "bchtest:qrhkv3zttvtlzn504eh8uxdsgkncc48a0ygz90fy5f",
     "ef66444b5b17f14e8fae6e7e19b045a78c54fd79",
     {
       "addrType": "pubkey",
@@ -171,7 +171,7 @@
     }
   ],
   [
-    "2NB72XtkjpnATMggui83aEtPawyyKvnbX2o",
+    "bchtest:prp72h7we64y8y0d92t80a9y6d82e5pp5qafr2whk4",
     "c3e55fceceaa4391ed2a9677f4a4d34eacd021a0",
     {
       "addrType": "script",
@@ -216,7 +216,7 @@
     }
   ],
   [
-    "1Gqk4Tv79P91Cc1STQtU3s1W6277M2CVWu",
+    "bitcoincash:qzkurnpqsx38yph6ufte9u5th32msv25n5sm8krtp7",
     "adc1cc2081a27206fae25792f28bbc55b831549d",
     {
       "addrType": "pubkey",
@@ -225,7 +225,7 @@
     }
   ],
   [
-    "33vt8ViH5jsr115AGkW6cEmEz9MpvJSwDk",
+    "bitcoincash:pqvglydfxx28ahwhgvkkuc2rsl3jkfz8py95pldjhu",
     "188f91a931947eddd7432d6e614387e32b244709",
     {
       "addrType": "script",
@@ -234,7 +234,7 @@
     }
   ],
   [
-    "mhaMcBxNh5cqXm4aTQ6EcVbKtfL6LGyK2H",
+    "bchtest:qqtffadurfeftdsq7sqp3fsc5m4y3m45nqxl9ddlkv",
     "1694f5bc1a7295b600f40018a618a6ea48eeb498",
     {
       "addrType": "pubkey",
@@ -243,7 +243,7 @@
     }
   ],
   [
-    "2MxgPqX1iThW3oZVk9KoFcE5M4JpiETssVN",
+    "bchtest:pqaek07h55x57zx35kc0vtmyf7n3zkhz7vxlq6zven",
     "3b9b3fd7a50d4f08d1a5b0f62f644fa7115ae2f3",
     {
       "addrType": "script",
@@ -288,7 +288,7 @@
     }
   ],
   [
-    "1JwMWBVLtiqtscbaRHai4pqHokhFCbtoB4",
+    "bitcoincash:qrzvrdeyj8k7rmk6egqxrpq8ac9hwt9dp5mfvxjdds",
     "c4c1b72491ede1eedaca00618407ee0b772cad0d",
     {
       "addrType": "pubkey",
@@ -297,7 +297,7 @@
     }
   ],
   [
-    "3QCzvfL4ZRvmJFiWWBVwxfdaNBT8EtxB5y",
+    "bitcoincash:prm0u6duk4y2s2wvunzhhahllzhn5kvply0nvd3ydx",
     "f6fe69bcb548a829cce4c57bf6fff8af3a5981f9",
     {
       "addrType": "script",
@@ -306,7 +306,7 @@
     }
   ],
   [
-    "mizXiucXRCsEriQCHUkCqef9ph9qtPbZZ6",
+    "bchtest:qqnplq6k3gyc4p3cs39a0tk2qww47g6jcqhcq04nl2",
     "261f83568a098a8638844bd7aeca039d5f2352c0",
     {
       "addrType": "pubkey",
@@ -315,7 +315,7 @@
     }
   ],
   [
-    "2NEWDzHWwY5ZZp8CQWbB7ouNMLqCia6YRda",
+    "bchtest:pr5npcvrffxjx3czwuu4r438en5zlw6a9cm22jfau6",
     "e930e1834a4d234702773951d627cce82fbb5d2e",
     {
       "addrType": "script",
@@ -360,7 +360,7 @@
     }
   ],
   [
-    "19dcawoKcZdQz365WpXWMhX6QCUpR9SY4r",
+    "bitcoincash:qp02mtumkufp7rcey4s6tf30te04gggzjgvef9l06l",
     "5eadaf9bb7121f0f192561a5a62f5e5f54210292",
     {
       "addrType": "pubkey",
@@ -369,7 +369,7 @@
     }
   ],
   [
-    "37Sp6Rv3y4kVd1nQ1JV5pfqXccHNyZm1x3",
+    "bitcoincash:pqljzrnjwlyfnsap2hxpey85zpktmhhvdcjse2m6lm",
     "3f210e7277c899c3a155cc1c90f4106cbddeec6e",
     {
       "addrType": "script",
@@ -378,7 +378,7 @@
     }
   ],
   [
-    "myoqcgYiehufrsnnkqdqbp69dddVDMopJu",
+    "bchtest:qry28s4qng5ctykruxq0qfy8ekgm5dqqk5kddtyy5u",
     "c8a3c2a09a298592c3e180f02487cd91ba3400b5",
     {
       "addrType": "pubkey",
@@ -387,7 +387,7 @@
     }
   ],
   [
-    "2N7FuwuUuoTBrDFdrAZ9KxBmtqMLxce9i1C",
+    "bchtest:pzvmx80heyrg69ypkkt90rwmknfmmy96av8f02lrrf",
     "99b31df7c9068d1481b596578ddbb4d3bd90baeb",
     {
       "addrType": "script",
@@ -432,7 +432,7 @@
     }
   ],
   [
-    "13p1ijLwsnrcuyqcTvJXkq2ASdXqcnEBLE",
+    "bitcoincash:qq0dgecp0uzray0df3ztf6xavaxmyywyuczgdf7t8l",
     "1ed467017f043e91ed4c44b4e8dd674db211c4e6",
     {
       "addrType": "pubkey",
@@ -441,7 +441,7 @@
     }
   ],
   [
-    "3ALJH9Y951VCGcVZYAdpA3KchoP9McEj1G",
+    "bitcoincash:pp0vur9dmhzptvvcpuqp0pv5wys2ekeklsarz20nkn",
     "5ece0cadddc415b1980f001785947120acdb36fc",
     {
       "addrType": "script",

@@ -4,9 +4,10 @@ var chai = require('chai');
 var expect = chai.expect;
 var should = chai.should();
 
+var owsCommon = require('@owstack/ows-common');
 var bchLib = require('..');
 var Opcode = bchLib.Opcode;
-var _ = bchLib.deps._;
+var lodash = owsCommon.deps.lodash;
 
 describe('Opcode', function() {
 
@@ -86,8 +87,8 @@ describe('Opcode', function() {
   });
 
   describe('@map', function() {
-    it('should have a map containing 117 elements', function() {
-      _.size(Opcode.map).should.equal(117);
+    it('should have a map containing 118 elements', function() {
+      lodash.size(Opcode.map).should.equal(118);
     });
   });
 
