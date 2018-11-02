@@ -267,7 +267,6 @@ describe('Interpreter', function() {
     var testAllFixtures = function(set) {
       var c = 0; var l = set.length;
       set.forEach(function(vector) {
-console.log(vector[1]+ ' > ' +vector[3]);
         if (vector.length === 1) {
           return;
         }
