@@ -15,7 +15,6 @@ describe('URI', function() {
   // TODO: Split this and explain tests
   it('parses uri strings correctly (test vector)', function() {
     var uri;
-
     URI.parse.bind(URI, 'badURI').should.throw(TypeError);
 
     uri = URI.parse('bitcoincash:');
@@ -49,23 +48,18 @@ describe('URI', function() {
     URI.isValid('bitcoincash:qzruaav37d2hwqfaqvsktwdqjly502s06qfra0qe9m?amount=1.2&other=param').should.equal(true);
     URI.isValid('bitcoincash:qzruaav37d2hwqfaqvsktwdqjly502s06qfra0qe9m?amount=1.2&req-other=param', ['req-other']).should.equal(true);
     URI.isValid('bchtest:qpzextxrtp4ettwsfru86fggmwf565h3jshdfuz5vj?amount=0.1&' +
-                'r=https%3A%2F%2Ftest.openwalletstack.com%2Fi%2F6DKgf8cnJC388irbXk5hHu').should.equal(true);
+                'r=https%3A%2F%2Ftest.example.com%2Fi%2F6DKgf8cnJC388irbXk5hHu').should.equal(true);
     URI.isValid('bitcoincash:').should.equal(false);
     URI.isValid('bitcoincash:badUri').should.equal(false);
     URI.isValid('bitcoincash:qzruaav37d2hwqfaqvsktvdqjly502s06qfra0qe9m?amount=bad').should.equal(false);
     URI.isValid('bitcoincash:qzruaav37d2hwqfaqvsktvdqjly502s06qfra0qe9m?amount=1.2&req-other=param').should.equal(false);
-    URI.isValid('bitcoincash:?r=https%3A%2F%2Ftest.bitpay.com%2Fi%2F6DKgf8cnJC388irbXk5hHu').should.equal(false);
+    URI.isValid('bitcoincash:?r=https%3A%2F%2Ftest.example.com%2Fi%2F6DKgf8cnJC388irbXk5hHu').should.equal(false);
   });
 
   it('fails on creation with no params', function() {
     (function(){
       return new URI();
     }).should.throw(TypeError);
-  });
-
-  it('do not need new keyword', function() {
-    var uri = URI('bitcoincash:qzruaav37d2hwqfaqvsktwdqjly502s06qfra0qe9m');
-    uri.should.be.instanceof(URI);
   });
 
   describe('instantiation from bitcoin uri', function() {

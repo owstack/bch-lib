@@ -16,8 +16,8 @@ bchLib.Networks = require('./lib/networks');
 bchLib.Opcode = require('./lib/opcode');
 bchLib.Script = require('./lib/script');
 bchLib.Transaction = require('./lib/transaction');
-bchLib.URI = require('./lib/uri');
 bchLib.Unit = require('./lib/unit');
+bchLib.URI = require('./lib/uri');
 
 // Internal usage, exposed for testing/advanced tweaking
 bchLib.Transaction.sighash = require('./lib/transaction/sighash');

@@ -123,7 +123,7 @@ describe('Transaction', function() {
   });
 
   it('fromObject with pay-to-public-key previous outputs', function() {
-    var tx = bchLib.Transaction({
+    var tx = Transaction({
       hash: '132856bf03d6415562a556437d22ac63c37a4595fd986c796eb8e02dc031aa25',
       version: 1,
       inputs: [{
@@ -146,7 +146,7 @@ describe('Transaction', function() {
       }],
       nLockTime: 139
     });
-    tx.inputs[0].should.be.instanceof(bchLib.Transaction.Input.PublicKey);
+    tx.inputs[0].should.be.instanceof(Transaction.Input.PublicKey);
     tx.inputs[0].output.satoshis.should.equal(5000000000);
     tx.inputs[0].output.script.toHex().should.equal('2103b1c65d65f1ff3fe145a4ede692460ae0606671d04e8449e99dd11c66ab55a7feac');
   });
@@ -754,7 +754,7 @@ describe('Transaction', function() {
         outputIndex: 0,
         script: new Script()
       }), outputScriptString, 10000);
-      transaction.inputs[0].output.script.should.be.instanceof(bchLib.Script);
+      transaction.inputs[0].output.script.should.be.instanceof(Script);
       transaction.inputs[0].output.script.toString().should.equal(outputScriptString);
     });
   });

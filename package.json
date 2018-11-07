@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@owstack/ows-common": "^0.0.9",
-    "@owstack/key-lib": "^0.0.10",
+    "@owstack/key-lib": "^0.0.11",
     "buffer-compare": "=1.0.0",
     "inherits": "=2.0.1"
   },
