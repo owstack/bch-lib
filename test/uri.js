@@ -172,7 +172,10 @@ describe('URI', function() {
       label: 'myLabel',
       other: 'xD'
     });
-    JSON.stringify(URI.fromObject(JSON.parse(json))).should.equal(json);
+    var obj = URI.fromObject(JSON.parse(json));
+    obj.protocol.should.equal('bitcoincash');
+    delete obj.protocol;
+    JSON.stringify(obj).should.equal(json);
   });
 
   it('should support numeric amounts', function() {
