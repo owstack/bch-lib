@@ -1,8 +1,6 @@
 'use strict';
 
 var bchLib = {};
-var owsCommon = require('@owstack/ows-common');
-var keyLib = require('@owstack/key-lib');
 
 // Module information
 bchLib.version = 'v' + require('./package.json').version;
