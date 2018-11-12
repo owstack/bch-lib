@@ -431,7 +431,7 @@ describe('Address', function() {
     it('should classify from a custom network', function() {
       var custom = {
         name: 'customnetwork',
-        symbol: 'customnetwork',
+        code: 'customnetwork',
         preference: 'BCH',
         prefix: {
           pubkeyhash: 10,
