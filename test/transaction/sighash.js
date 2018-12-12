@@ -9,6 +9,7 @@ var bchLib = require('../..');
 var BN = owsCommon.BN;
 var Buffer = owsCommon.deps.Buffer;
 var Script = bchLib.Script;
+var Signature = keyLib.crypto.Signature;
 var Transaction = bchLib.Transaction;
 var sighash = Transaction.sighash;
 var vectors_sighash = require('../data/sighash.json');
