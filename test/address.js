@@ -37,7 +37,7 @@ describe('Address', function() {
 
   it('should throw an error because of bad type param', function() {
     (function() {
-      return new Address(PKHLivenet[0], 'BCH', 'pubkey');
+      return new Address(PKHLivenet[0], 'bch', 'pubkey');
     }).should.throw('Third argument must be "pubkeyhash" or "scripthash".');
   });
 
@@ -432,7 +432,7 @@ describe('Address', function() {
       var custom = {
         name: 'customnetwork',
         code: 'customnetwork',
-        preference: 'BCH',
+        currency: 'BCH',
         prefix: {
           pubkeyhash: 10,
           privatekey: 0x1e,

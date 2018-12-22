@@ -717,7 +717,7 @@ describe('Script', function() {
       s.toAddress().toString().should.equal('bchtest:qzukhqt0x796hv07tpdhheaze5twhxdnuslxfpzagp');
     });
     it('should create script from public key', function() {
-      var pubkey = new PublicKey('022df8750480ad5b26950b25c7ba79d3e37d75f640f8e5d9bcd5b150a0f85014da', 'BCH');
+      var pubkey = new PublicKey('022df8750480ad5b26950b25c7ba79d3e37d75f640f8e5d9bcd5b150a0f85014da', 'bch');
       var s = Script.buildPublicKeyHashOut(pubkey);
       should.exist(s);
       s.toString().should.equal('OP_DUP OP_HASH160 20 0x9674af7395592ec5d91573aa8d6557de55f60147 OP_EQUALVERIFY OP_CHECKSIG');

@@ -11,13 +11,13 @@ var lodash = owsCommon.deps.lodash;
 describe('Networks', function() {
 
   it('will get network based on string code value', function() {
-    var network = Networks.get('BCH');
+    var network = Networks.get('bch');
     network.should.equal(Networks.livenet);
     network.should.equal(Networks.mainnet);
     network.should.equal(Networks.defaultNetwork);
-    var network = Networks.get('BCHREG');
+    var network = Networks.get('bchreg');
     network.should.equal(Networks.regtest);
-    var network = Networks.get('BCHTEST');
+    var network = Networks.get('bchtest');
     network.should.equal(Networks.testnet);
   });
 
@@ -25,7 +25,7 @@ describe('Networks', function() {
     Networks.defaultNetwork.should.equal(Networks.livenet);
     Networks.defaultNetwork = Networks.testnet;
     Networks.defaultNetwork.should.equal(Networks.testnet);
-    Networks.defaultNetwork = Networks.get('BCH');
+    Networks.defaultNetwork = Networks.get('bch');
     Networks.defaultNetwork.should.equal(Networks.livenet);
   });
 
@@ -44,35 +44,35 @@ describe('Networks', function() {
 
   constants.forEach(function(key) {
     it('should have constant ' + key + ' for all networks', function() {
-      lodash.has(Networks.get('BCH'), key).should.equal(true);
-      lodash.has(Networks.get('BCHREG'), key).should.equal(true);
-      lodash.has(Networks.get('BCHTEST'), key).should.equal(true);
+      lodash.has(Networks.get('bch'), key).should.equal(true);
+      lodash.has(Networks.get('bchreg'), key).should.equal(true);
+      lodash.has(Networks.get('bchtest'), key).should.equal(true);
     });
   });
 
   it('tests only for the specified key', function() {
-    expect(Networks.get(0x00, 'prefix.pubkeyhash')).to.equal(Networks.get('BCH'));
+    expect(Networks.get(0x00, 'prefix.pubkeyhash')).to.equal(Networks.get('bch'));
     // Testnet and Regtest have the same pubkeyhash value.
-    expect(Networks.get(0x6f, 'prefix.pubkeyhash').alias).to.equal(Networks.get('BCHTEST').alias);
+    expect(Networks.get(0x6f, 'prefix.pubkeyhash').alias).to.equal(Networks.get('bchtest').alias);
     expect(Networks.get(0x6f, 'prefix.pubkeyhash').alias).to.equal(Networks.testnet.alias);
     expect(Networks.get(0xa0, 'prefix.privatekey')).to.equal(undefined);
   });
 
   it('can test for multiple keys', function() {
-    expect(Networks.get(0x00, ['prefix.pubkeyhash', 'prefix.scripthash'])).to.equal(Networks.get('BCH'));
+    expect(Networks.get(0x00, ['prefix.pubkeyhash', 'prefix.scripthash'])).to.equal(Networks.get('bch'));
     // Testnet and Regtest have the same pubkeyhash value.
-    expect(Networks.get(0x6f, ['prefix.pubkeyhash', 'prefix.scripthash']).alias).to.equal(Networks.get('BCHTEST').alias);
-    expect(Networks.get(0xc4, ['prefix.pubkeyhash', 'prefix.scripthash']).alias).to.equal(Networks.get('BCHTEST').alias);
+    expect(Networks.get(0x6f, ['prefix.pubkeyhash', 'prefix.scripthash']).alias).to.equal(Networks.get('bchtest').alias);
+    expect(Networks.get(0xc4, ['prefix.pubkeyhash', 'prefix.scripthash']).alias).to.equal(Networks.get('bchtest').alias);
     expect(Networks.get(0xa0, ['prefix.privatekey', 'port'])).to.equal(undefined);
   });
 
   it('converts to string using the "name" property', function() {
-    Networks.get('BCH').toString().should.equal('BCH');
+    Networks.get('bch').toString().should.equal('bch');
   });
 
   it('network object should be immutable', function() {
-    expect(Networks.get('BCH').name).to.equal('BCH')
-    var fn = function() { Networks.get('BCH').name = 'Something else' }
+    expect(Networks.get('bch').name).to.equal('bch')
+    var fn = function() { Networks.get('bch').name = 'Something else' }
     expect(fn).to.throw(TypeError)
   });
 
