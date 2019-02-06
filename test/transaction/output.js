@@ -102,11 +102,11 @@ describe('Output', function() {
   it('can set a script from a buffer', function() {
     var newOutput = new Output(output.toObject());
     newOutput.setScript(Script().add(0).toBuffer());
-    newOutput.inspect().should.equal('<Output (0 sats) <Script: OP_0>>');
+    newOutput.inspect().should.equal('<Output (0 satoshis) <Script: OP_0>>');
   });
 
   it('has a inspect property', function() {
-    output.inspect().should.equal('<Output (0 sats) <Script: >>');
+    output.inspect().should.equal('<Output (0 satoshis) <Script: >>');
   });
 
   var output2 = new Output({
@@ -166,7 +166,7 @@ describe('Output', function() {
     var invalidOutputScript = new Buffer('0100000000000000014c', 'hex');
     var br = new BufferReader(invalidOutputScript);
     var output = Output.fromBufferReader(br);
-    output.inspect().should.equal('<Output (1 sats) 4c>');
+    output.inspect().should.equal('<Output (1 satoshis) 4c>');
   });
 
   it('roundtrips to/from JSON', function() {
