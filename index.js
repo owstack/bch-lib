@@ -21,4 +21,10 @@ bchLib.URI = require('./lib/uri');
 // Internal usage, exposed for testing/advanced tweaking
 bchLib.Transaction.sighash = require('./lib/transaction/sighash');
 
+// Inject this library into each of its networks as network.lib.
+var bchNetworks = require('@owstack/network-lib').getFiltered({currency: bchLib.Networks.currency});
+for (var i = 0; i < bchNetworks.length; i++) {
+	bchNetworks[i].lib = bchLib;
+}
+
 module.exports = bchLib;
