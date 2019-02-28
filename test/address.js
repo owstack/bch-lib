@@ -428,32 +428,6 @@ describe('Address', function() {
       b.toString().should.equal('bitcoincash:qqazje5ucx2l672lc8cundsa5q9lwdm3rcknh40sxg');
     });
 
-    it('should classify from a custom network', function() {
-      var custom = {
-        name: 'customnetwork',
-        code: 'customnetwork',
-        currency: 'BCH',
-        prefix: {
-          pubkeyhash: 10,
-          privatekey: 0x1e,
-          scripthash: 15
-        },
-        version: {
-          xpubkey: 0x02e8de8f,
-          xprivkey: 0x02e8da54
-        },
-        networkMagic: 0x0c110907,
-        port: 7333
-      };
-      Networks.add(custom);
-      var addressString = '57gZdnwcQHLirKLwDHcFiWLq9jTZwRaxaE';
-      var network = Networks.get('customnetwork');
-      var address = Address.fromString(addressString, 'customnetwork');
-      address.type.should.equal(Address.PayToPublicKeyHash);
-      address.network.should.equal(network);
-      Networks.remove(network);
-    });
-
     describe('from a script', function() {
       it('should fail to build address from a non p2sh,p2pkh script', function() {
         var s = new Script('OP_CHECKMULTISIG');

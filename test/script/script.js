@@ -781,14 +781,14 @@ describe('Script', function() {
     });
 
     it('inherits network property from other script', function() {
-      var s1 = new Script.fromAddress(new Address('1FSMWkjVPAxzUNjbxT52p3mVKC971rfW3S'));
+      var s1 = new Script.fromAddress(new Address('bitcoincash:qz096jyddfhs48c333n89hh02ruplgyc5v07z9dtgz'));
       var s2 = Script.buildScriptHashOut(s1);
       should.exist(s1._network);
       s1._network.should.equal(s2._network);
     });
 
     it('inherits network property form an address', function() {
-      var address = new Address('34Nn91aTGaULqWsZiunrBPHzFBDrZ3B8XS');
+      var address = new Address('bitcoincash:pqwh2csz7098vwrr9us65pde4asmeg983sz9ndtvef');
       var script = Script.buildScriptHashOut(address);
       should.exist(script._network);
       script._network.should.equal(address.network);
@@ -868,7 +868,7 @@ describe('Script', function() {
       expect(BufferUtil.equal(script.getData(), address.hashBuffer)).to.be.true();
     });
     it('for a P2SH address', function() {
-      var address = Address.fromString('3GhtMmAbWrUf6Y8vDxn9ETB14R6V7Br3mt');
+      var address = Address.fromString('bitcoincash:pzjt8lxnl977xtexlycnl5fyt0al9gcnauyjtqh68n');
       var script = new Script(address);
       expect(BufferUtil.equal(script.getData(), address.hashBuffer)).to.be.true();
     });
